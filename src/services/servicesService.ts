@@ -28,6 +28,9 @@ export interface OpticalService {
   featured?: boolean;
   free?: boolean;
   corporate?: boolean;
+  pricing?: {
+    description?: string;
+  };
   subscription?: boolean;
   warranty?: boolean;
 }

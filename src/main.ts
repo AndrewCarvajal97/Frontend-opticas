@@ -19,7 +19,7 @@ app.config.globalProperties.$appName = 'Óptica Visión Plus';
 app.config.globalProperties.$appVersion = '1.0.0';
 
 // Manejo de errores globales
-app.config.errorHandler = (error, instance, info) => {
+app.config.errorHandler = (error, _instance, info) => {
   console.error('Error global capturado:', error);
   console.error('Información del componente:', info);
   
@@ -29,7 +29,7 @@ app.config.errorHandler = (error, instance, info) => {
 
 // Configurar warnings (solo en desarrollo)
 if (import.meta.env.DEV) {
-  app.config.warnHandler = (msg, instance, trace) => {
+  app.config.warnHandler = (msg, _instance, trace) => {
     console.warn('Warning de Vue:', msg);
     console.warn('Trace:', trace);
   };

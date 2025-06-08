@@ -352,7 +352,7 @@ class GeneralService extends WebServicesBase {
     try {
       const config = {
         version: '1.0.0',
-        environment: process.env.NODE_ENV || 'development',
+        environment: import.meta.env.MODE || 'development',
         features: {
           newsletter: true,
           onlineBooking: true,

@@ -228,7 +228,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { useShoppingCart } from '@/composables/useShoppingCart';
 import { useNotifications } from '@/composables/useNotifications';

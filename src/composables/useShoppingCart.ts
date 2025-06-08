@@ -4,7 +4,7 @@
  * Utiliza Vue 3 Composition API
  */
 
-import { ref, computed, watch, reactive } from 'vue';
+import { computed, watch, reactive } from 'vue';
 import type { Product } from '@/services/productsService';
 
 export interface CartItem {

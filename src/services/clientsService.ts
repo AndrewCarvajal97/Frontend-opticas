@@ -4,7 +4,8 @@
  * Maneja todas las operaciones relacionadas con clientes y sus pedidos
  */
 
-import { WebServicesBase, ApiResponse, PaginatedResponse } from './webServicesBase';
+import { WebServicesBase } from './webServicesBase';
+import type { ApiResponse, PaginatedResponse } from './webServicesBase';
 
 // Interfaces específicas para clientes
 export interface Client {
@@ -118,7 +119,8 @@ class ClientsService extends WebServicesBase {
     });
 
     const url = queryParams.toString() ? `${this.endpoint}?${queryParams}` : this.endpoint;
-    return this.get<Client[]>(url);
+    // Cast the response to PaginatedResponse since we know the API returns pagination info
+    return this.get<Client[]>(url) as Promise<PaginatedResponse<Client>>;
   }
 
   /**

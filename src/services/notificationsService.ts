@@ -4,7 +4,8 @@
  * Maneja todas las operaciones relacionadas con notificaciones push, email y SMS
  */
 
-import { WebServicesBase, ApiResponse, PaginatedResponse } from './webServicesBase';
+import { WebServicesBase } from './webServicesBase';
+import type { ApiResponse, PaginatedResponse } from './webServicesBase';
 
 // Interfaces específicas para notificaciones
 export interface Notification {
@@ -124,7 +125,8 @@ class NotificationsService extends WebServicesBase {
     });
 
     const url = queryParams.toString() ? `${this.endpoint}?${queryParams}` : this.endpoint;
-    return this.get<Notification[]>(url);
+    // Cast the response to PaginatedResponse since we know the API returns pagination info
+    return this.get<Notification[]>(url) as Promise<PaginatedResponse<Notification>>;
   }
 
   /**
@@ -226,7 +228,8 @@ class NotificationsService extends WebServicesBase {
    * Obtener notificaciones del usuario
    */
   public async getUserNotifications(userId: string, page = 1, limit = 20): Promise<PaginatedResponse<Notification>> {
-    return this.get<Notification[]>(`${this.endpoint}/user/${userId}?page=${page}&limit=${limit}`);
+    // Cast the response to PaginatedResponse since we know the API returns pagination info
+    return this.get<Notification[]>(`${this.endpoint}/user/${userId}?page=${page}&limit=${limit}`) as Promise<PaginatedResponse<Notification>>;
   }
 
   /**

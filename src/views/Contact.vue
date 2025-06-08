@@ -151,10 +151,10 @@
                   :class="`social-${platform}`"
                   target="_blank"
                   rel="noopener noreferrer"
-                  @click="handleSocialClick(platform)"
+                  @click="handleSocialClick(platform.toString())"
                 >
-                  <span class="social-icon">{{ getSocialIcon(platform) }}</span>
-                  <span class="social-label">{{ getSocialLabel(platform) }}</span>
+                  <span class="social-icon">{{ getSocialIcon(platform.toString()) }}</span>
+                  <span class="social-label">{{ getSocialLabel(platform.toString()) }}</span>
                 </a>
               </div>
             </div>
@@ -285,8 +285,8 @@ const callbackPhone = ref('');
 const callbackError = ref('');
 const isRequestingCallback = ref(false);
 
-// Computed properties para el formulario
-const selectedService = computed(() => route.query.service as string || '');
+// Reactive state para el formulario
+const selectedService = ref(route.query.service as string || '');
 const requestType = computed(() => route.query.type as string || '');
 
 const formTitle = computed(() => {

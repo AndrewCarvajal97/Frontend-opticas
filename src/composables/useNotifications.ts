@@ -4,7 +4,7 @@
  * Utiliza Vue 3 Composition API siguiendo principios SOLID
  */
 
-import { ref, reactive, computed } from 'vue';
+import { reactive, computed } from 'vue';
 
 export type NotificationType = 'success' | 'error' | 'warning' | 'info';
 

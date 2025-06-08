@@ -322,10 +322,6 @@ const handleImageError = (event: Event): void => {
   img.src = '/assets/image/monturas/COD(0001).webp'; // Ruta de imagen por defecto
 };
 
-const hasOptions = (item: CartItem): boolean => {
-  return !!(item.selectedColor || item.selectedSize);
-};
-
 const formatPrice = (price: number): string => {
   return new Intl.NumberFormat('es-CO', {
     minimumFractionDigits: 0,

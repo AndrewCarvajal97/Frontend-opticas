@@ -64,7 +64,7 @@ interface Props {
 }
 
 // Props y emisores
-const props = defineProps<Props>();
+defineProps<Props>();
 const emit = defineEmits<{
   socialClick: [platform: string];
 }>();

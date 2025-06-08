@@ -257,7 +257,7 @@ interface Props {
   socialMedia: SocialMedia;
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   quickLinks: () => [
     { id: 'home', label: 'Inicio', path: '/', icon: '🏠' },
     { id: 'products', label: 'Productos', path: '/productos', icon: '👓' },

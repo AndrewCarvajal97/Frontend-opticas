@@ -4,7 +4,8 @@
  * Maneja todas las operaciones relacionadas con promociones y descuentos
  */
 
-import { WebServicesBase, ApiResponse, PaginatedResponse } from './webServicesBase';
+import { WebServicesBase } from './webServicesBase';
+import type { ApiResponse, PaginatedResponse } from './webServicesBase';
 
 // Interfaces específicas para promociones
 export interface Promotion {
@@ -92,7 +93,8 @@ class PromotionsService extends WebServicesBase {
     });
 
     const url = queryParams.toString() ? `${this.endpoint}?${queryParams}` : this.endpoint;
-    return this.get<Promotion[]>(url);
+    // Cast the response to PaginatedResponse since we know the API returns pagination info
+    return this.get<Promotion[]>(url) as Promise<PaginatedResponse<Promotion>>;
   }
 
   /**
@@ -174,7 +176,8 @@ class PromotionsService extends WebServicesBase {
    * Obtener historial de uso de una promoción
    */
   public async getPromotionUsage(promotionId: string, page = 1, limit = 20): Promise<PaginatedResponse<PromotionUsage>> {
-    return this.get<PromotionUsage[]>(`${this.endpoint}/${promotionId}/usage?page=${page}&limit=${limit}`);
+    // Cast the response to PaginatedResponse since we know the API returns pagination info
+    return this.get<PromotionUsage[]>(`${this.endpoint}/${promotionId}/usage?page=${page}&limit=${limit}`) as Promise<PaginatedResponse<PromotionUsage>>;
   }
 
   /**

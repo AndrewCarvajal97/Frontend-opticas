@@ -4,7 +4,8 @@
  * Implementa todas las operaciones relacionadas con usuarios
  */
 
-import { WebServicesBase, ApiResponse, PaginatedResponse } from './webServicesBase';
+import { WebServicesBase } from './webServicesBase';
+import type { ApiResponse, PaginatedResponse } from './webServicesBase';
 
 // Interfaces específicas para usuarios
 export interface User {
@@ -71,7 +72,8 @@ class UsersService extends WebServicesBase {
     if (filters.limit) queryParams.append('limit', filters.limit.toString());
 
     const url = queryParams.toString() ? `${this.endpoint}?${queryParams}` : this.endpoint;
-    return this.get<User[]>(url);
+    // Cast the response to PaginatedResponse since we know the API returns pagination info
+    return this.get<User[]>(url) as Promise<PaginatedResponse<User>>;
   }
 
   /**

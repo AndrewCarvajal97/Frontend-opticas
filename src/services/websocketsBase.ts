@@ -67,7 +67,7 @@ export class WebSocketsBase {
   /**
    * Conecta al WebSocket (Preparado para implementación futura)
    */
-  public async connect(endpoint: string = '', protocols?: string[]): Promise<void> {
+  public async connect(endpoint: string = '', _protocols?: string[]): Promise<void> {
     // TODO: Implementar cuando el backend esté listo
     console.log('Conexión WebSocket preparada para:', `${this.baseUrl}${endpoint}`);
     return Promise.resolve();
@@ -170,7 +170,8 @@ export class WebSocketsBase {
   /**
    * Inicia el ping periódico para mantener la conexión viva
    */
-  private startPing(): void {
+  // @ts-ignore - This method is for future implementation
+  private _startPing(): void {
     this.stopPing();
     this.pingTimer = window.setInterval(() => {
       if (this.isConnected()) {

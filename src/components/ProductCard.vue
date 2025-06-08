@@ -43,7 +43,7 @@
       <!-- Indicadores de imagen múltiple -->
       <div v-if="product.images.length > 1" class="image-indicators">
         <button
-          v-for="(image, index) in product.images"
+          v-for="(_, index) in product.images"
           :key="index"
           class="indicator-dot"
           :class="{ 'dot-active': currentImageIndex === index }"
@@ -290,7 +290,7 @@ const handleImageClick = (): void => {
 
 const handleImageError = (event: Event): void => {
   const img = event.target as HTMLImageElement;
-  img.src = 'src/assets/image/monturas/mujer/COD(0001).webp'; // Imagen por defecto
+  img.src = '@/assets/image/monturas/mujer/COD(0001).webp'; // Imagen por defecto
 };
 
 const handleImageLoad = (): void => {
@@ -316,11 +316,6 @@ const handleProductClick = (): void => {
 const handleColorSelect = (color: string): void => {
   selectedColor.value = color;
   emit('colorSelect', color);
-};
-
-const handleSizeSelect = (size: string): void => {
-  selectedSize.value = size;
-  emit('sizeSelect', size);
 };
 
 const handleAddToCart = async (): Promise<void> => {

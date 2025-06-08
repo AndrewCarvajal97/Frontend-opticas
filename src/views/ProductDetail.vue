@@ -131,13 +131,12 @@
 
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { useRoute } from 'vue-router';
 import { useShoppingCart } from '@/composables/useShoppingCart';
 import { useNotifications } from '@/composables/useNotifications';
 import { productsService, type Product } from '@/services/productsService';
 
 const route = useRoute();
-const router = useRouter();
 const { addToCart } = useShoppingCart();
 const { showSuccess, showError } = useNotifications();
 

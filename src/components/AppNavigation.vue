@@ -130,7 +130,7 @@ interface Props {
   }>;
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   companyName: 'Optivision 4k',
   tagline: 'Mira al mundo con otros ojos',
   ctaText: 'Contactar',

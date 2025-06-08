@@ -68,8 +68,9 @@ class ProductsService extends WebServicesBase {
     try {
       // Simulación de datos locales (en desarrollo futuro será una llamada real a la API)
       const response = await import('@/data/products.json');
+      // Cast the response to the expected type
       return {
-        data: response.default,
+        data: response.default as unknown as ProductsResponse,
         status: 200,
         message: 'Products fetched successfully',
         success: true
@@ -318,7 +319,7 @@ export const productsService = new ProductsService();
  * Función para obtener un producto por su ID
  */
 export async function getProductById(productId: string): Promise<ApiResponse<Product>> {
-  const response = await fetch(`${process.env.VUE_APP_API_BASE_URL}/products/${productId}`);
+  const response = await fetch(`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api'}/products/${productId}`);
   if (!response.ok) {
     throw new Error('Error al obtener el producto');
   }

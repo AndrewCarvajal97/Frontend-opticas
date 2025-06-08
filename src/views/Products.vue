@@ -63,7 +63,7 @@
 import { ref, computed } from 'vue';
 import productsData from '../data/products.json';
 
-const defaultImage = 'src/assets/image/monturas/mujer/COD(0001).webp';
+const defaultImage = '@/assets/image/monturas/mujer/COD(0001).webp';
 const categories = ref(productsData.categories);
 const products = ref(productsData.products);
 

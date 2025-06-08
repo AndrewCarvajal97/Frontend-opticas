@@ -166,19 +166,7 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue';
 
-// Interfaces para tipado
-interface HeroContent {
-  title: string;
-  subtitle: string;
-  description: string;
-  ctaText: string;
-  features: string[];
-  pricing: {
-    homeExam: number;
-    discount: string;
-    description: string;
-  };
-}
+// Props definition
 
 // Props con valores predeterminados
 const props = withDefaults(defineProps<{
@@ -215,14 +203,10 @@ const safeHeroContent = computed(() => {
     pricing: {
       homeExam: props.heroContent?.pricing?.homeExam || 0,
       description: props.heroContent?.pricing?.description || 'Examen gratuito al comprar tus lentes'
-    }
+    },
+    ctaText: 'Contactar Ahora'
   };
 });
-
-// Props del componente
-interface Props {
-  heroContent: HeroContent;
-}
 
 
 // Eventos que emite el componente
