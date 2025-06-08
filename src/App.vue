@@ -322,6 +322,7 @@ onUnmounted(() => {
 <style>
 /* Importar estilos centralizados */
 @import '@/styles/main.css';
+@import '@/styles/optivision.css';
 
 /* Estilos específicos de la aplicación */
 .app {

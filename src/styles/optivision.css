@@ -1,0 +1,540 @@
+/**
+ * Estilos Específicos de Optivisión 4K
+ * Complemento de la hoja de estilos principal
+ * Aplicando kit de marca oficial completo
+ * 
+ * Colores oficiales:
+ * - Negro: #0A0A0A
+ * - Blanco: #FFFFFF  
+ * - Dorado mate: #C5A76E
+ * 
+ * Tipografías oficiales:
+ * - Títulos y CTA: Montserrat
+ * - Texto: Open Sans
+ */
+
+/* ==================== VARIABLES ADICIONALES OPTIVISIÓN 4K ==================== */
+
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+:root {
+  /* Sombras específicas de marca */
+  --shadow-optivision: 0 4px 15px rgba(200, 160, 93, 0.15);
+  --shadow-optivision-lg: 0 8px 25px rgba(200, 160, 93, 0.2);
+  --shadow-optivision-xl: 0 12px 35px rgba(200, 160, 93, 0.25);
+  
+  /* Opacidades para efectos */
+  --optivision-opacity-light: 0.1;
+  --optivision-opacity-medium: 0.3;
+  --optivision-opacity-strong: 0.6;
+  
+  /* Espaciados específicos para el diseño */
+  --optivision-spacing-hero: 8rem;
+  --optivision-spacing-section: 6rem;
+  --optivision-spacing-card: 2rem;
+}
+
+/* ==================== TEXTO Y TIPOGRAFÍA OPTIVISIÓN ==================== */
+
+/* Eslogan oficial */
+.optivision-tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  color: var(--optivision-gold);
+  font-weight: 500;
+  position: relative;
+}
+
+.optivision-tagline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+}
+
+.optivision-tagline:hover::after {
+  transform: scaleX(1);
+}
+
+/* Títulos con gradiente */
+.title-gradient-optivision {
+  background: var(--gradient-gold-elegant);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* Texto destacado */
+.text-highlight-optivision {
+  background: linear-gradient(120deg, transparent 0%, var(--optivision-gold) 0%, var(--optivision-gold) 100%, transparent 100%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--transition-slow);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.text-highlight-optivision:hover {
+  background-size: 100% 100%;
+  color: var(--optivision-white);
+}
+
+/* ==================== BOTONES ESPECÍFICOS OPTIVISIÓN ==================== */
+
+/* CTA Principal de Optivisión */
+.btn-optivision-cta {
+  background: var(--gradient-gold-elegant);
+  color: var(--optivision-white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  border: 3px solid var(--optivision-gold);
+  box-shadow: var(--shadow-optivision);
+  transition: all var(--transition-normal);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.btn-optivision-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-optivision-cta:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-optivision-xl);
+  border-color: var(--optivision-gold-dark);
+  background: var(--optivision-gold);
+  text-decoration: none;
+}
+
+.btn-optivision-cta:hover::before {
+  left: 100%;
+}
+
+.btn-optivision-cta:active {
+  transform: translateY(-2px);
+  transition: transform 0.1s;
+}
+
+/* Botón secundario */
+.btn-optivision-outline {
+  background: transparent;
+  color: var(--optivision-gold);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border: 2px solid var(--optivision-gold);
+  border-radius: 30px;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-optivision-outline:hover {
+  background: var(--optivision-gold);
+  color: var(--optivision-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-optivision);
+  text-decoration: none;
+}
+
+/* Botón fantasma */
+.btn-optivision-ghost {
+  background: transparent;
+  color: var(--optivision-gold);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  position: relative;
+}
+
+.btn-optivision-ghost::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--optivision-gold);
+  border-radius: 25px;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  z-index: -1;
+}
+
+.btn-optivision-ghost:hover {
+  color: var(--optivision-white);
+  text-decoration: none;
+}
+
+.btn-optivision-ghost:hover::before {
+  opacity: 1;
+}
+
+/* ==================== CARDS Y CONTENEDORES OPTIVISIÓN ==================== */
+
+/* Card principal de Optivisión */
+.card-optivision {
+  background: var(--optivision-white);
+  border: 2px solid transparent;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  position: relative;
+  box-shadow: var(--shadow-optivision);
+}
+
+.card-optivision::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+}
+
+.card-optivision:hover {
+  transform: translateY(-8px);
+  border-color: var(--optivision-gold);
+  box-shadow: var(--shadow-optivision-xl);
+}
+
+.card-optivision:hover::before {
+  transform: scaleX(1);
+}
+
+/* Card de servicio premium */
+.card-service-premium {
+  background: var(--gradient-hero);
+  color: var(--optivision-white);
+  border-radius: 25px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.card-service-premium::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(200, 160, 93, 0.1) 0%, transparent 70%);
+  transition: transform var(--transition-slow);
+}
+
+.card-service-premium:hover::before {
+  transform: scale(1.2);
+}
+
+/* ==================== SECCIONES HERO Y DESTACADAS ==================== */
+
+/* Hero principal */
+.hero-optivision {
+  background: var(--gradient-hero);
+  color: var(--optivision-white);
+  padding: var(--optivision-spacing-hero) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-optivision::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(200, 160, 93, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(200, 160, 93, 0.05) 0%, transparent 50%);
+  opacity: 0.8;
+}
+
+.hero-optivision .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Sección de servicios */
+.section-services-optivision {
+  background: linear-gradient(45deg, #f9fafb 0%, var(--optivision-white) 50%, #f9fafb 100%);
+  padding: var(--optivision-spacing-section) 0;
+  position: relative;
+}
+
+/* ==================== ELEMENTOS DECORATIVOS ==================== */
+
+/* Separador elegante */
+.divider-optivision {
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 50px;
+  margin: 3rem auto;
+  width: 60px;
+  position: relative;
+}
+
+.divider-optivision::before,
+.divider-optivision::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  background: var(--optivision-gold);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.divider-optivision::before {
+  left: -15px;
+}
+
+.divider-optivision::after {
+  right: -15px;
+}
+
+/* Icono destacado */
+.icon-feature-optivision {
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-primary);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--optivision-white);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-optivision);
+}
+
+.icon-feature-optivision:hover {
+  transform: rotate(5deg) scale(1.1);
+  box-shadow: var(--shadow-optivision-lg);
+}
+
+/* Badge premium */
+.badge-premium-optivision {
+  background: var(--gradient-gold-elegant);
+  color: var(--optivision-white);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-optivision);
+  position: relative;
+  overflow: hidden;
+}
+
+.badge-premium-optivision::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* ==================== EFECTOS Y ANIMACIONES ==================== */
+
+/* Efecto de cristal dorado */
+.glass-gold-optivision {
+  background: rgba(200, 160, 93, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(200, 160, 93, 0.2);
+  border-radius: 15px;
+}
+
+/* Hover con brillo dorado */
+.hover-golden-glow:hover {
+  box-shadow: 
+    0 0 20px rgba(200, 160, 93, 0.3),
+    0 0 40px rgba(200, 160, 93, 0.1);
+  transition: box-shadow var(--transition-normal);
+}
+
+/* Pulso dorado */
+.pulse-gold {
+  animation: pulseGold 2s infinite;
+}
+
+@keyframes pulseGold {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(200, 160, 93, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(200, 160, 93, 0);
+  }
+}
+
+/* ==================== RESPONSIVE DESIGN ESPECÍFICO ==================== */
+
+@media (max-width: 768px) {
+  .btn-optivision-cta {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .hero-optivision {
+    padding: 4rem 0;
+  }
+  
+  .card-optivision {
+    border-radius: 15px;
+  }
+  
+  .divider-optivision {
+    width: 40px;
+    margin: 2rem auto;
+  }
+  
+  .icon-feature-optivision {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-optivision-cta {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .card-service-premium {
+    padding: 2rem;
+    border-radius: 20px;
+  }
+  
+  .title-gradient-optivision {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==================== ESTADOS DE ACCESIBILIDAD ==================== */
+
+/* Alto contraste */
+@media (prefers-contrast: high) {
+  .card-optivision {
+    border: 3px solid var(--optivision-black);
+  }
+  
+  .btn-optivision-cta {
+    border: 3px solid var(--optivision-black);
+    background: var(--optivision-gold);
+  }
+  
+  .glass-gold-optivision {
+    background: rgba(200, 160, 93, 0.3);
+    border: 2px solid var(--optivision-gold);
+  }
+}
+
+/* Reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .btn-optivision-cta,
+  .card-optivision,
+  .icon-feature-optivision {
+    transition: none;
+    transform: none;
+  }
+  
+  .btn-optivision-cta:hover,
+  .card-optivision:hover,
+  .icon-feature-optivision:hover {
+    transform: none;
+  }
+  
+  .pulse-gold {
+    animation: none;
+  }
+  
+  .badge-premium-optivision::before {
+    animation: none;
+  }
+}
+
+/* ==================== UTILIDADES ESPECÍFICAS ==================== */
+
+/* Espaciado específico de Optivisión */
+.spacing-optivision-sm { margin: 1rem 0; }
+.spacing-optivision-md { margin: 2rem 0; }
+.spacing-optivision-lg { margin: 3rem 0; }
+.spacing-optivision-xl { margin: 4rem 0; }
+
+/* Colores de fondo con opacidad */
+.bg-gold-light-10 { background-color: rgba(200, 160, 93, 0.1); }
+.bg-gold-light-20 { background-color: rgba(200, 160, 93, 0.2); }
+.bg-gold-light-30 { background-color: rgba(200, 160, 93, 0.3); }
+
+.bg-black-light-10 { background-color: rgba(10, 10, 10, 0.1); }
+.bg-black-light-20 { background-color: rgba(10, 10, 10, 0.2); }
+.bg-black-light-30 { background-color: rgba(10, 10, 10, 0.3); }
+
+/* Texto con sombra dorada */
+.text-shadow-gold {
+  text-shadow: 0 2px 4px rgba(200, 160, 93, 0.3);
+}
+
+/* Borde dorado */
+.border-gold {
+  border: 2px solid var(--optivision-gold);
+}
+
+.border-gold-light {
+  border: 1px solid var(--optivision-gold);
+}
+
+.border-gold-thick {
+  border: 3px solid var(--optivision-gold);
+}

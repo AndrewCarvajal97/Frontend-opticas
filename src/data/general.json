@@ -1,27 +1,48 @@
 {
   "general": {
     "companyName": "OPTIVISIÓN 4K",
-    "tagline": "Mira al mundo con otros ojos ",
-    "description": "Somos especialistas en cuidado visual con más de 2 años de experiencia. Ofrecemos productos de alta calidad y servicios innovadores como exámenes ópticos a domicilio.",
+    "tagline": "Mira al mundo con otros ojos",
+    "description": "Somos una óptica emergente con atención domiciliaria y proyección futura a punto físico. Ofrecemos servicios ópticos personalizados, accesibles y confiables, con atención cercana, productos de alta calidad y procesos eficientes que priorizan el bienestar y la satisfacción del cliente.",
     "phone": "+57 312 376 5934",
+    "whatsapp": "+57 312 376 5934",
     "email": "info@optivision4k.com",
-    "address": "Solo servicio a domicilio en Bucaramanga y área metropolitana",
+    "address": "Servicio a domicilio en Bucaramanga y área metropolitana",
     "workingHours": "Lunes a Viernes: 8:00 AM - 6:00 PM | Sábados: 9:00 AM - 4:00 PM",
     "socialMedia": {
-      "facebook": "https://facebook.com/Optivision4k",
-      "instagram": "https://instagram.com/Optivision4k",
+      "facebook": "https://facebook.com/optivision.4k",
+      "instagram": "https://instagram.com/optivision.4k", 
       "whatsapp": "https://wa.me/573123765934",
-      "twitter": "https://twitter.com/Optivision4k"
+      "twitter": "https://twitter.com/optivision4k"
+    },
+    "mission": "Ofrecer servicios ópticos personalizados, accesibles y confiables, con atención cercana, productos de alta calidad y procesos eficientes que priorizan el bienestar y la satisfacción del cliente.",
+    "vision": "Convertirnos en un referente nacional en óptica domiciliaria, siendo reconocidos por la excelencia y la calidad humana en cada atención. A futuro, proyectamos integrar un punto físico sin perder nuestra esencia de cercanía y prueba en casa.",
+    "values": [
+      "Profesionalismo",
+      "Confianza", 
+      "Cercanía",
+      "Compromiso",
+      "Innovación",
+      "Responsabilidad social (parte de las ventas apoya a animales vulnerables)"
+    ],
+    "founder": "Michaell Pulido",
+    "brandColors": {
+      "primary": "#C5A76E",
+      "secondary": "#0A0A0A",
+      "accent": "#FFFFFF"
+    },
+    "brandFonts": {
+      "heading": "Montserrat",
+      "body": "Open Sans"
     }
   },
   "hero": {
     "title": "Examen Óptico a Domicilio",
-    "subtitle": "¡La comodidad de un examen profesional en tu hogar!",
-    "description": "Somos la primera óptica en la región que lleva el examen óptico directamente a tu puerta. Nuestros optometristas certificados realizan evaluaciones completas con equipos de última tecnología.",
+    "subtitle": "¡La comodidad de un examen profesional, directo a tu puerta!",
+    "description": "Recibir atención visual en casa ahora es más fácil y cómodo que nunca. Nuestros optometristas certificados realizan una evaluación completa con métodos tradicionales confiables y asesoría personalizada, para que tengas una solución visual precisa sin salir de casa.",
     "ctaText": "Agenda tu Cita a Domicilio",
     "features": [
       "Examen óptico profesional en tu hogar",
-      "Equipos de última tecnología",
+      "Asesoría personalizada y confiable",
       "Optometristas certificados",
       "Descuento si compras tus lentes con nosotros"
     ],
@@ -33,7 +54,7 @@
   },
   "about": {
     "title": "¿Por qué elegirnos?",
-    "description": "Somos pioneros en brindar servicios ópticos a domicilio. Nuestra pasión por la innovación y el cuidado visual nos ha convertido en la optica de confianza para miles de familias.",
+    "description": "Somos pioneros en brindar servicios ópticos a domicilio con un enfoque innovador. Nuestro catálogo virtual por forma de rostro y el servicio de prueba en casa nos ha convertido en la óptica de confianza para miles de familias.",
     "features": [
       {
         "icon": "🏠",
@@ -41,38 +62,177 @@
         "description": "Llevamos nuestros servicios hasta la comodidad de tu hogar u oficina"
       },
       {
-        "icon": "👨‍⚕️",
-        "title": "Profesionales Certificados",
-        "description": "Contamos con optometristas licenciados y con amplia experiencia"
+        "icon": "🏠",
+        "title": "Prueba en Casa",
+        "description": "Selecciona hasta 5 monturas y pruébalas en la comodidad de tu hogar"
       },
       {
-        "icon": "🔬",
-        "title": "Tecnología Avanzada",
-        "description": "Utilizamos equipos de última generación para diagnósticos precisos"
+        "icon": "💳",
+        "title": "Pago Flexible",
+        "description": "Reserva con solo el 50% y paga el resto al recibir tus monturas"
       },
       {
-        "icon": "💰",
-        "title": "Precios Competitivos",
-        "description": "Los mejores precios del mercado con financiación disponible"
+        "icon": "🤝",
+        "title": "Atención Personalizada",
+        "description": "Servicio cercano y profesional con entrega personalizada"
       },
       {
         "icon": "⚡",
         "title": "Entrega Rápida",
-        "description": "Entregamos tus lentes en tiempo récord sin comprometer la calidad"
+        "description": "Entregamos tus monturas seleccionadas en tiempo récord"
       },
       {
         "icon": "🛡️",
-        "title": "Garantía Extendida",
+        "title": "Garantía  de 6 Meses",
         "description": "Todos nuestros productos cuentan con garantía y soporte postventa"
+      }
+    ],
+    "brandValues": {
+      "title": "Nuestros Valores",
+      "subtitle": "Lo que nos define como empresa",
+      "values": [
+        {
+          "name": "Profesionalismo",
+          "description": "Excelencia en cada servicio que ofrecemos",
+          "icon": "💼"
+        },
+        {
+          "name": "Confianza",
+          "description": "Relaciones sólidas basadas en la transparencia",
+          "icon": "🤝"
+        },
+        {
+          "name": "Cercanía",
+          "description": "Atención humana y personalizada",
+          "icon": "❤️"
+        },
+        {
+          "name": "Compromiso",
+          "description": "Dedicación total con nuestros clientes",
+          "icon": "💪"
+        },
+        {
+          "name": "Innovación",
+          "description": "Tecnología y métodos vanguardistas",
+          "icon": "💡"
+        },
+        {
+          "name": "Responsabilidad Social",
+          "description": "Parte de nuestras ventas apoya a animales vulnerables",
+          "icon": "🐾"
+        }
+      ]
+    }
+  },
+  "faceShapeGuide": {
+    "title": "¿Qué forma de rostro tienes?",
+    "subtitle": "Encuentra las monturas perfectas para ti",
+    "description": "Nuestro catálogo virtual está organizado por forma de rostro para ayudarte a encontrar las monturas que mejor te quedan.",
+    "shapes": [
+      {
+        "type": "ovalado",
+        "name": "Ovalado",
+        "description": "Rostro equilibrado con frente ligeramente más ancha que la mandíbula",
+        "recommendations": ["rectangular", "aviador", "full rim suave"],
+        "image": "/images/face-shapes/oval.svg",
+        "monturaTypes": [
+          {
+            "name": "Rectangular",
+            "priority": 1,
+            "description": "Añade definición angular"
+          },
+          {
+            "name": "Aviador",
+            "priority": 2,
+            "description": "Estilo clásico y versátil"
+          },
+          {
+            "name": "Full Rim Suave",
+            "priority": 3,
+            "description": "Elegancia y sofisticación"
+          }
+        ]
+      },
+      {
+        "type": "cuadrado",
+        "name": "Cuadrado",
+        "description": "Rostro con líneas fuertes y mandíbula pronunciada",
+        "recommendations": ["redondeadas", "ovaladas delgadas", "cat eye suaves"],
+        "image": "/images/face-shapes/square.svg",
+        "monturaTypes": [
+          {
+            "name": "Redondeadas",
+            "priority": 1,
+            "description": "Suavizan las líneas angulares"
+          },
+          {
+            "name": "Ovaladas Delgadas",
+            "priority": 2,
+            "description": "Equilibran las proporciones"
+          },
+          {
+            "name": "Cat Eye Suaves",
+            "priority": 3,
+            "description": "Feminidad con elegancia"
+          }
+        ]
+      },
+      {
+        "type": "corazon",
+        "name": "Corazón",
+        "description": "Frente amplia que se estrecha hacia la barbilla",
+        "recommendations": ["semi-rimless", "aviador invertido", "ovaladas finas"],
+        "image": "/images/face-shapes/heart.svg",
+        "monturaTypes": [
+          {
+            "name": "Semi-rimless",
+            "priority": 1,
+            "description": "Reducen el volumen superior"
+          },
+          {
+            "name": "Aviador Invertido",
+            "priority": 2,
+            "description": "Equilibran las proporciones"
+          },
+          {
+            "name": "Ovaladas Finas",
+            "priority": 3,
+            "description": "Delicadeza y armonía"
+          }
+        ]
+      },
+      {
+        "type": "diamante",
+        "name": "Diamante",
+        "description": "Pómulos prominentes con frente y mandíbula más estrechas",
+        "recommendations": ["cat eye", "ovaladas curvilíneas", "con puente marcado"],
+        "image": "/images/face-shapes/diamond.svg",
+        "monturaTypes": [
+          {
+            "name": "Cat Eye",
+            "priority": 1,
+            "description": "Acentúan la belleza natural"
+          },
+          {
+            "name": "Ovaladas Curvilíneas",
+            "priority": 2,
+            "description": "Suavizan los ángulos"
+          },
+          {
+            "name": "Con Puente Marcado",
+            "priority": 3,
+            "description": "Equilibran las proporciones"
+          }
+        ]
       }
     ]
   },
   "contact": {
-    "title": "¿Listo para mejorar tu visión?",
-    "subtitle": "Contáctanos y agenda tu cita a domicilio hoy mismo",
-    "description": "Nuestro equipo está listo para atenderte. Agenda tu examen óptico a domicilio y descubre la diferencia de un servicio personalizado.",
+    "title": "¿Listo para seleccionar tus monturas?",
+    "subtitle": "Contactanos y comienza tu experiencia Optivisión 4K",
+    "description": "Nuestro equipo está listo para ayudarte a encontrar las monturas perfectas. Inicia tu experiencia con nuestro catálogo virtual por forma de rostro.",
     "form": {
-      "title": "Agenda tu Cita a Domicilio",
+      "title": "Solicita tu Catálogo Virtual",
       "fields": [
         {
           "name": "fullName",
@@ -86,7 +246,7 @@
           "label": "Teléfono/Celular",
           "type": "tel",
           "required": true,
-          "placeholder": "300 123 4567"
+          "placeholder": "+57 300 123 4567"
         },
         {
           "name": "email",
@@ -97,31 +257,110 @@
         },
         {
           "name": "address",
-          "label": "Dirección",
+          "label": "Dirección de Entrega",
           "type": "text",
           "required": true,
-          "placeholder": "Dirección completa para la visita"
+          "placeholder": "Dirección completa en Bucaramanga y área metropolitana"
         },
         {
-          "name": "preferredDate",
-          "label": "Fecha Preferida",
-          "type": "date",
-          "required": true
+          "name": "faceShape",
+          "label": "Forma de Rostro",
+          "type": "select",
+          "required": false,
+          "options": [
+            {"value": "ovalado", "label": "Ovalado"},
+            {"value": "cuadrado", "label": "Cuadrado"},
+            {"value": "corazon", "label": "Corazón"},
+            {"value": "diamante", "label": "Diamante"},
+            {"value": "no_se", "label": "No estoy seguro/a"}
+          ]
         },
         {
-          "name": "preferredTime",
-          "label": "Hora Preferida",
-          "type": "time",
-          "required": true
+          "name": "preferredStyle",
+          "label": "Estilo Preferido",
+          "type": "select",
+          "required": false,
+          "options": [
+            {"value": "clasico", "label": "Clásico"},
+            {"value": "moderno", "label": "Moderno"},
+            {"value": "vintage", "label": "Vintage"},
+            {"value": "deportivo", "label": "Deportivo"},
+            {"value": "sin_preferencia", "label": "Sin preferencia"}
+          ]
         },
         {
           "name": "message",
           "label": "Mensaje Adicional",
           "type": "textarea",
           "required": false,
-          "placeholder": "¿Alguna solicitud especial o información adicional?"
+          "placeholder": "¿Alguna preferencia específica o información adicional?"
         }
       ]
+    },
+    "whatsappMessage": "¡Hola! Me interesa el catálogo virtual de Optivisión 4K para seleccionar mis 5 monturas. ¿Pueden ayudarme?",
+    "socialCTA": {
+      "title": "Síguenos en nuestras redes",
+      "subtitle": "Mantente al día con nuestras novedades y promociones"
     }
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros clientes",
+    "subtitle": "Experiencias reales de quienes han confiado en Optivisión 4K",
+    "reviews": [
+      {
+        "id": 1,
+        "name": "María González",
+        "location": "Bucaramanga",
+        "rating": 5,
+        "comment": "El catálogo virtual fue increíble, me ayudó a elegir las monturas perfectas para mi rostro. El servicio a domicilio fue puntual y profesional.",
+        "service": "Catálogo Virtual + Prueba en Casa"
+      },
+      {
+        "id": 2,
+        "name": "Carlos Rodríguez",
+        "location": "Girón",
+        "rating": 5,
+        "comment": "Poder probar 5 monturas en casa me dio mucha tranquilidad. El pago del 50% inicial fue muy cómodo. Excelente servicio.",
+        "service": "Selección 5 Monturas"
+      },
+      {
+        "id": 3,
+        "name": "Ana Sofía Martín",
+        "location": "Piedecuesta",
+        "rating": 5,
+        "comment": "La garantía de 6 meses es real. Cuando tuve un pequeño problema, me lo solucionaron inmediatamente. Muy recomendados.",
+        "service": "Garantía y Postventa"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Resolvemos tus dudas sobre nuestro servicio",
+    "questions": [
+      {
+        "question": "¿Cómo funciona el catálogo virtual por forma de rostro?",
+        "answer": "Nuestro catálogo está organizado según los diferentes tipos de rostro (ovalado, cuadrado, corazón, diamante). Te ayudamos a identificar tu forma de rostro y te mostramos las monturas que mejor te quedan."
+      },
+      {
+        "question": "¿Realmente puedo probar 5 monturas en casa?",
+        "answer": "Sí, seleccionas hasta 5 monturas de nuestro catálogo y te las llevamos a tu domicilio para que las pruebes con tranquilidad. Solo pagas el 50% de reserva."
+      },
+      {
+        "question": "¿Qué pasa si ninguna de las 5 monturas me gusta?",
+        "answer": "Si ninguna te convence, puedes seleccionar otras 5 monturas diferentes. Tu satisfacción es nuestra prioridad."
+      },
+      {
+        "question": "¿La garantía de 6 meses es real?",
+        "answer": "Absolutamente. Ofrecemos garantía real de 6 meses en todos nuestros productos, tanto monturas como lentes. Cualquier defecto de fabricación está cubierto."
+      },
+      {
+        "question": "¿Qué área de cobertura tienen?",
+        "answer": "Atendemos toda Bucaramanga y su área metropolitana: Girón, Piedecuesta y Floridablanca."
+      },
+      {
+        "question": "¿Cómo funciona el pago del 50%?",
+        "answer": "Reservas con el 50% del valor total cuando seleccionas tus monturas. El 50% restante lo pagas cuando recibas el producto final en tu domicilio."
+      }
+    ]
   }
 }

@@ -1,7 +1,11 @@
 /**
- * Base WebSockets Class
- * Implementa principios SOLID - Single Responsibility Principle
- * Maneja todas las conexiones WebSocket de forma centralizada
+ * Base WebSockets Class - Optivisión 4K
+ * Implementa principios SOLID y Clean Architecture
+ * Single Responsibility: Manejo de conexiones WebSocket en tiempo real
+ * Open/Closed: Extensible para diferentes tipos de mensajes y eventos
+ * Liskov Substitution: Puede ser extendido por servicios WebSocket específicos
+ * Interface Segregation: Interfaces separadas para diferentes tipos de eventos
+ * Dependency Inversion: Abstracción sobre WebSocket nativo del navegador
  */
 
 export interface WebSocketMessage<T = any> {
@@ -34,7 +38,7 @@ export class WebSocketsBase {
   private reconnectAttempts = 0;
   private isReconnecting = false;
 
-  constructor(baseUrl: string = process.env.VUE_APP_WS_BASE_URL || 'ws://localhost:3000') {
+  constructor(baseUrl: string = import.meta.env.VITE_WS_BASE_URL || 'ws://localhost:3000') {
     this.baseUrl = baseUrl;
     this.config = {
       reconnectAttempts: 5,
@@ -43,7 +47,7 @@ export class WebSocketsBase {
       pongTimeout: 5000, // 5 segundos
     };
 
-    console.warn('WebSockets desactivados: el backend aún no está implementado.');
+    console.warn('WebSockets preparados para backend futuro - Optivisión 4K');
   }
 
   /**
@@ -61,10 +65,35 @@ export class WebSocketsBase {
   }
 
   /**
+   * Conecta al WebSocket (Preparado para implementación futura)
+   */
+  public async connect(endpoint: string = '', protocols?: string[]): Promise<void> {
+    // TODO: Implementar cuando el backend esté listo
+    console.log('Conexión WebSocket preparada para:', `${this.baseUrl}${endpoint}`);
+    return Promise.resolve();
+  }
+
+  /**
+   * Envía un mensaje por WebSocket (Preparado para implementación futura)
+   */
+  public send<T>(type: string, data: T): void {
+    // TODO: Implementar cuando el backend esté listo
+    console.log('Mensaje WebSocket preparado:', { type, data });
+  }
+
+  /**
    * Desconecta el WebSocket
    */
   public disconnect(): void {
-    console.warn('Desconexión bloqueada: el backend aún no está implementado.');
+    console.log('Desconexión WebSocket - Optivisión 4K');
+    if (this.socket) {
+      this.socket.close();
+      this.socket = null;
+    }
+    this.stopPing();
+    this.clearReconnectTimer();
+    this.isReconnecting = false;
+    this.reconnectAttempts = 0;
   }
 
   /**

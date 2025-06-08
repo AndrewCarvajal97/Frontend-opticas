@@ -1,14 +1,40 @@
 /**
- * Base Web Services Class
- * Implementa principios SOLID - Single Responsibility Principle
- * Maneja todas las conexiones HTTP REST API de forma centralizada
+ * Base Web Services Class - Optivisión 4K
+ * Implementa principios SOLID y Clean Architecture
+ * Single Responsibility: Manejo de conexiones HTTP REST API
+ * Open/Closed: Extensible para nuevos tipos de request
+ * Liskov Substitution: Puede ser extendido por servicios específicos
+ * Interface Segregation: Interfaces específicas para cada tipo de respuesta
+ * Dependency Inversion: Depende de abstracciones, no de implementaciones concretas
  */
 
+// Interfaces siguiendo principios SOLID
 export interface ApiResponse<T = any> {
   data: T;
   status: number;
   message: string;
   success: boolean;
+  timestamp?: Date;
+  requestId?: string;
+}
+
+export interface PaginatedResponse<T> extends ApiResponse<T[]> {
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    totalPages: number;
+  };
+}
+
+export interface ErrorResponse {
+  error: {
+    code: string;
+    message: string;
+    details?: any;
+  };
+  status: number;
+  timestamp: Date;
 }
 
 export interface RequestConfig {
@@ -22,11 +48,13 @@ export class WebServicesBase {
   private defaultHeaders: Record<string, string>;
   private timeout: number;
 
-  constructor(baseUrl: string = (import.meta as any).env.VUE_APP_API_BASE_URL || 'http://localhost:3000/api') {
+  constructor(baseUrl: string = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api') {
     this.baseUrl = baseUrl;
     this.defaultHeaders = {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
+      'X-Client-Version': '1.0.0',
+      'X-Client-Platform': 'web',
     };
     this.timeout = 10000; // 10 segundos por defecto
   }

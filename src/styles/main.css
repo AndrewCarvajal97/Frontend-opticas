@@ -1,29 +1,38 @@
 /**
- * Hoja de Estilos Centralizada - Óptica
- * Diseño moderno, juvenil y atractivo
- * Variables CSS para consistencia y mantenibilidad
+ * Hoja de Estilos Centralizada - OPTIVISIÓN 4K
+ * "Mira al mundo con otros ojos"
+ * Aplicando kit de marca oficial: Negro #0A0A0A, Blanco #FFFFFF, Dorado mate #C5A76E
+ * Tipografías: Montserrat (títulos y CTA), Open Sans (texto)
+ * Siguiendo principios SOLID y Clean Architecture
  */
 
-/* ==================== VARIABLES GLOBALES ==================== */
+/* ==================== VARIABLES GLOBALES - KIT DE MARCA OPTIVISIÓN 4K ==================== */
 :root {
-  /* Colores Primarios - Paleta vibrante y juvenil */
-  --primary-color: #C8A05D;           /* Índigo vibrante */
-  --primary-light: #f1c984;           /* Índigo claro */
-  --primary-dark: #aa813a;            /* Índigo oscuro */
-  --secondary-color: #000000;         /* Verde esmeralda */
-  --secondary-light: #383838;         /* Verde claro */
-  --secondary-dark: #000000;          /* Verde oscuro */
+  /* Colores Oficiales de Optivisión 4K */
+  --optivision-black: #0A0A0A;        /* Negro oficial */
+  --optivision-white: #FFFFFF;        /* Blanco oficial */
+  --optivision-gold: #C5A76E;         /* Dorado mate oficial */
+  --optivision-gold-light: #f1c984;   /* Dorado claro */
+  --optivision-gold-dark: #aa813a;    /* Dorado oscuro */
+  
+  /* Aplicación de colores a variables del sistema */
+  --primary-color: var(--optivision-gold);     /* Dorado mate como primario */
+  --primary-light: var(--optivision-gold-light);
+  --primary-dark: var(--optivision-gold-dark);
+  --secondary-color: var(--optivision-black);  /* Negro como secundario */
+  --secondary-light: #383838;                  /* Gris suave */
+  --secondary-dark: var(--optivision-black);
   
   /* Colores de Acento */
   --accent-color: #f59e0b;            /* Amarillo dorado */
   --accent-light: #fbbf24;            /* Amarillo claro */
   --accent-dark: #d97706;             /* Amarillo oscuro */
   
-  /* Colores de Estado */
+  /* Colores de Estado - Armonizados con kit de marca */
   --success-color: #10b981;
-  --warning-color: #f59e0b;
+  --warning-color: var(--optivision-gold);
   --error-color: #ef4444;
-  --info-color: #3b82f6;
+  --info-color: var(--optivision-gold-dark);
   
   /* Colores Neutros */
   --white: #ffffff;
@@ -39,15 +48,17 @@
   --gray-900: #111827;
   --black: #000000;
   
-  /* Gradientes */
-  --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
-  --gradient-secondary: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-light) 100%);
-  --gradient-accent: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
-  --gradient-hero: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  /* Gradientes Oficiales de Optivisión 4K */
+  --gradient-primary: linear-gradient(135deg, var(--optivision-gold) 0%, var(--optivision-gold-light) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--optivision-black) 0%, #383838 100%);
+  --gradient-accent: linear-gradient(135deg, var(--optivision-gold) 0%, var(--optivision-gold-dark) 100%);
+  --gradient-hero: linear-gradient(135deg, var(--optivision-gold) 0%, var(--optivision-black) 100%);
+  --gradient-gold-elegant: linear-gradient(145deg, var(--optivision-gold-light) 0%, var(--optivision-gold) 50%, var(--optivision-gold-dark) 100%);
   
-  /* Tipografía */
-  --font-family-primary: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-family-heading: 'Poppins', 'Inter', sans-serif;
+  /* Tipografías Oficiales de Optivisión 4K */
+  --font-family-primary: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-family-heading: 'Montserrat', 'Open Sans', sans-serif;
+  --font-family-cta: 'Montserrat', sans-serif;
   --font-family-mono: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
   
   /* Tamaños de Fuente */
@@ -144,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-heading);
   font-weight: var(--font-weight-bold);
   line-height: 1.2;
-  color: var(--gray-900);
+  color: var(--optivision-black);
   margin-bottom: var(--spacing-md);
 }
 
@@ -184,13 +195,13 @@ p {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--optivision-gold);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 a:hover {
-  color: var(--primary-dark);
+  color: var(--optivision-gold-dark);
   text-decoration: underline;
 }
 
@@ -222,47 +233,65 @@ a:hover {
   pointer-events: none;
 }
 
+/* Botones principales siguiendo kit de marca Optivisión 4K */
 .btn-primary {
   background: var(--gradient-primary);
-  color: var(--white);
+  color: var(--optivision-white);
   box-shadow: var(--shadow-md);
+  font-family: var(--font-family-cta);
+  font-weight: var(--font-weight-semibold);
+  border: 2px solid transparent;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+  background: var(--gradient-gold-elegant);
+  border-color: var(--optivision-gold-dark);
 }
 
 .btn-secondary {
   background: var(--gradient-secondary);
-  color: var(--white);
+  color: var(--optivision-white);
   box-shadow: var(--shadow-md);
+  font-family: var(--font-family-cta);
+  font-weight: var(--font-weight-semibold);
+  border: 2px solid transparent;
 }
 
 .btn-secondary:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+  background: var(--optivision-black);
+  border-color: var(--optivision-gold);
 }
 
 .btn-outline {
   background: transparent;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  color: var(--optivision-gold);
+  border: 2px solid var(--optivision-gold);
+  font-family: var(--font-family-cta);
+  font-weight: var(--font-weight-medium);
 }
 
 .btn-outline:hover {
-  background: var(--primary-color);
-  color: var(--white);
+  background: var(--optivision-gold);
+  color: var(--optivision-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
 .btn-ghost {
   background: transparent;
-  color: var(--primary-color);
+  color: var(--optivision-gold);
+  font-family: var(--font-family-cta);
+  font-weight: var(--font-weight-medium);
 }
 
 .btn-ghost:hover {
-  background: var(--primary-color);
-  color: var(--white);
+  background: var(--optivision-gold);
+  color: var(--optivision-white);
+  transform: translateY(-1px);
 }
 
 /* Tamaños de botones */
@@ -335,8 +364,8 @@ a:hover {
 
 .form-input:focus {
   outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  border-color: var(--optivision-gold);
+  box-shadow: 0 0 0 3px rgba(200, 160, 93, 0.1);
 }
 
 .form-input:invalid {
@@ -428,21 +457,35 @@ a:hover {
 .p-lg { padding: var(--spacing-lg); }
 .p-xl { padding: var(--spacing-xl); }
 
-/* Colores de texto */
-.text-primary { color: var(--primary-color); }
-.text-secondary { color: var(--secondary-color); }
-.text-accent { color: var(--accent-color); }
+/* Colores de texto - Kit de marca Optivisión 4K */
+.text-primary { color: var(--optivision-gold); }
+.text-secondary { color: var(--optivision-black); }
+.text-accent { color: var(--optivision-gold-dark); }
+.text-gold { color: var(--optivision-gold); }
+.text-gold-light { color: var(--optivision-gold-light); }
+.text-gold-dark { color: var(--optivision-gold-dark); }
+.text-black { color: var(--optivision-black); }
+.text-white { color: var(--optivision-white); }
 .text-gray-500 { color: var(--gray-500); }
 .text-gray-700 { color: var(--gray-700); }
 .text-gray-900 { color: var(--gray-900); }
-.text-white { color: var(--white); }
 
-/* Fondos */
-.bg-primary { background-color: var(--primary-color); }
-.bg-secondary { background-color: var(--secondary-color); }
+/* Fondos - Kit de marca Optivisión 4K */
+.bg-primary { background-color: var(--optivision-gold); }
+.bg-secondary { background-color: var(--optivision-black); }
+.bg-gold { background-color: var(--optivision-gold); }
+.bg-gold-light { background-color: var(--optivision-gold-light); }
+.bg-gold-dark { background-color: var(--optivision-gold-dark); }
+.bg-black { background-color: var(--optivision-black); }
+.bg-white { background-color: var(--optivision-white); }
 .bg-gray-50 { background-color: var(--gray-50); }
 .bg-gray-100 { background-color: var(--gray-100); }
-.bg-white { background-color: var(--white); }
+
+/* Fondos con gradiente */
+.bg-gradient-primary { background: var(--gradient-primary); }
+.bg-gradient-secondary { background: var(--gradient-secondary); }
+.bg-gradient-hero { background: var(--gradient-hero); }
+.bg-gradient-gold-elegant { background: var(--gradient-gold-elegant); }
 
 /* Alineación de texto */
 .text-center { text-align: center; }
