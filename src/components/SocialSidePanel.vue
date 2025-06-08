@@ -168,10 +168,10 @@ onUnmounted(() => {
 .social-link {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   padding: 0.8rem;
   color: var(--optivision-black);
-  background: rgba(255, 255, 255, 0.85);
+  background: transparent;
   border-radius: 12px;
   text-decoration: none;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
