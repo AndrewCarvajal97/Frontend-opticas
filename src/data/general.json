@@ -38,13 +38,14 @@
   "hero": {
     "title": "Examen Óptico a Domicilio",
     "subtitle": "¡La comodidad de un examen profesional, directo a tu puerta!",
-    "description": "Recibir atención visual en casa ahora es más fácil y cómodo que nunca. Nuestros optometristas certificados realizan una evaluación completa con métodos tradicionales confiables y asesoría personalizada, para que tengas una solución visual precisa sin salir de casa.",
+    "description": "Recibir atención visual en casa ahora es más fácil y cómodo que nunca. Nuestros optometristas certificados realizan una evaluación completa con métodos tradicionales confiables, asesoría personalizada y además, cada atención contribuye a ayudar a un peludito en situación vulnerable. Ver mejor también puede cambiar vidas.",
     "ctaText": "Agenda tu Cita a Domicilio",
     "features": [
       "Examen óptico profesional en tu hogar",
       "Asesoría personalizada y confiable",
       "Optometristas certificados",
-      "Descuento si compras tus lentes con nosotros"
+      "Descuento si compras tus lentes con nosotros",
+      "Tu consulta también apoya a un peludito 🐾"
     ],
     "pricing": {
       "homeExam": 35000,
