@@ -48,7 +48,7 @@ onUnmounted(() => {
 const getSocialIcon = (platform: string): string => {
   const icons = {
     facebook: '<img src="src/assets/image/logos/facebook.png" alt="Facebook" />',
-    instagram: '<img src="src/assets/image/logos/instagram.png" alt="Instagram" />',
+    instagram: '<img src="src/assets/image/logos/instagram (1).png" alt="Instagram" />',
     whatsapp: '<img src="src/assets/image/logos/whatsapp.png" alt="WhatsApp" />',
     twitter: '<img src="src/assets/image/logos/tik-tok.png" alt="Twitter" />',
   };
@@ -107,7 +107,7 @@ const handleClick = (platform: string) => {
   min-width: 2.6rem;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  justify-content: center;
+    
 }
 
 .social-link:hover {
@@ -122,22 +122,18 @@ const handleClick = (platform: string) => {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: 1px;
+  height: 1px;
   flex-shrink: 0;
   transition: all 0.3s ease;
 }
 
 .social-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  width: 20%;
+  height: 20%;
 }
 
-.social-link:hover .social-icon {
-  width: 24px;
-  height: 24px;
-}
+
 
 /* --- Etiqueta --- */
 .social-label {
