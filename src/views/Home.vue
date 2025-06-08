@@ -524,6 +524,7 @@ onMounted(() => {
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  
   gap: var(--spacing-xl);
 }
 
@@ -537,6 +538,7 @@ onMounted(() => {
   transition: all var(--transition-normal);
   opacity: 0;
   animation: slideInUp 0.6s ease-out forwards;
+  align-items: center;
 }
 
 .feature-card:hover {

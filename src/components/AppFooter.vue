@@ -14,7 +14,12 @@
           <div class="footer-section">
             <div class="footer-brand">
               <div class="brand-logo">
-                <span class="logo-icon">👓</span>
+                <img 
+                  src="@/assets/image/logos/LOGOOPTIVISIÓN4K.webp" 
+                  alt="Optivisión 4K Logo" 
+                  class="company-logo"
+                  loading="lazy"
+                />
                 <div class="brand-text">
                   <h3 class="brand-name">{{ companyInfo.companyName }}</h3>
                   <p class="brand-tagline">{{ companyInfo.tagline }}</p>
@@ -157,7 +162,13 @@
                 rel="noopener noreferrer"
                 @click="handleSocialClick(platform)"
               >
-                <span class="social-icon">{{ getSocialIcon(platform) }}</span>
+                <span class="social-icon">
+                  <img 
+                    :src="getSocialIcon(platform)" 
+                    :alt="getSocialLabel(platform)"
+                    loading="lazy"
+                  />
+                </span>
                 <span class="social-label">{{ getSocialLabel(platform) }}</span>
               </a>
             </div>
@@ -170,7 +181,8 @@
         <div class="footer-bottom-content">
           <div class="copyright">
             <p class="copyright-text">
-              © {{ currentYear }} {{ companyInfo.companyName }}. Todos los derechos reservados.
+              © {{ currentYear }} {{ companyInfo.companyName }}. Desarrollado por 
+              <a href="https://andrewcarvajal.dev" target="_blank" rel="noopener noreferrer">Andres Carvajal</a>
             </p>
           </div>
 
@@ -199,6 +211,12 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+
+// Importar imágenes correctamente para Vite
+import facebookIcon from '@/assets/image/logos/facebook.png';
+import instagramIcon from '@/assets/image/logos/instagram (1).png';
+import whatsappIcon from '@/assets/image/logos/whatsapp.png';
+import tiktokIcon from '@/assets/image/logos/tik-tok.png';
 
 // Interfaces para tipado
 interface CompanyInfo {
@@ -307,14 +325,16 @@ const handleNewsletterSubmit = async (): Promise<void> => {
   }
 };
 
+// Mapa de iconos importados correctamente
+const socialIcons: Record<string, string> = {
+  facebook: facebookIcon,
+  instagram: instagramIcon,
+  whatsapp: whatsappIcon,
+  twitter: tiktokIcon,
+};
+
 const getSocialIcon = (platform: string): string => {
-  const icons = {
-    facebook: '📘',
-    instagram: '📸',
-    whatsapp: '💬',
-    twitter: '🐦'
-  };
-  return icons[platform as keyof typeof icons] || '🔗';
+  return socialIcons[platform] || '';
 };
 
 const getSocialLabel = (platform: string): string => {
@@ -322,7 +342,7 @@ const getSocialLabel = (platform: string): string => {
     facebook: 'Facebook',
     instagram: 'Instagram',
     whatsapp: 'WhatsApp',
-    twitter: 'Twitter'
+    twitter: 'TikTok'
   };
   return labels[platform as keyof typeof labels] || platform;
 };
@@ -372,9 +392,12 @@ const getSocialLabel = (platform: string): string => {
   gap: var(--spacing-sm);
 }
 
-.logo-icon {
-  font-size: 2rem;
+.company-logo {
+  width: 80px;
+  height: 80px;
+  aspect-ratio:  1 / 1;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  filter: brightness(0) invert(1);
 }
 
 .brand-text {
@@ -668,12 +691,29 @@ const getSocialLabel = (platform: string): string => {
 }
 
 .social-twitter:hover {
-  background: #1da1f2;
+  background: #000000;
   color: white;
 }
 
 .social-icon {
-  font-size: var(--font-size-lg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 5px;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover .social-icon img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 .social-label {
@@ -760,6 +800,14 @@ const getSocialLabel = (platform: string): string => {
     text-align: center;
   }
 
+  .brand-logo {
+    justify-content: center;
+  }
+
+  .company-logo {
+    width: 50px;
+  }
+
   .section-title::after {
     left: 50%;
     transform: translateX(-50%);
@@ -771,6 +819,11 @@ const getSocialLabel = (platform: string): string => {
 
   .contact-item {
     justify-content: center;
+  }
+
+  .social-icon {
+    width: 28px;
+    height: 28px;
   }
 
   .footer-bottom-content {
@@ -792,39 +845,21 @@ const getSocialLabel = (platform: string): string => {
     padding: 0 var(--spacing-sm);
   }
 
+  .company-logo {
+    width: 40px;
+  }
+
+  .social-icon {
+    width: 24px;
+    height: 24px;
+  }
+
   .input-group {
     flex-direction: column;
   }
 
   .newsletter-btn {
     width: 100%;
-  }
-
-  .social-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
-    gap: var(--spacing-sm);
-  }
-
-  .social-link {
-    width: 100%;
-    min-width: auto;
-  }
-
-  .brand-logo {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .contact-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .contact-icon {
-    margin-bottom: var(--spacing-xs);
   }
 }
 

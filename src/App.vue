@@ -118,7 +118,8 @@ const companyData = ref<any>({
   phone: '+57 312 376 5934',
   whatsapp: '+57 312 376 5934',
   email: 'info@opticavision4k.com',
-  address: 'Calle 123 #45-67, Pedraza, Magdalena',
+  address: 'Solo Servicios a Domicilio',
+  addressDetails: 'Atendemos en Bucaramanga y alrededores',
   workingHours: 'Lunes a Viernes: 8:00 AM - 6:00 PM | Sábados: 9:00 AM - 4:00 PM',
   socialMedia: {
     facebook: 'https://facebook.com/opticavision4k',
@@ -453,7 +454,7 @@ onUnmounted(() => {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .main-content {
-    margin-top: 60px; /* Altura de navbar en móvil */
+    margin-top: 0px; /* Altura de navbar en móvil */
   }
 
   .page-container {

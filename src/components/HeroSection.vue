@@ -326,12 +326,14 @@ onMounted(() => {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
+  gap: var(--spacing-2xl);
   margin: 0;
 }
 
 /* Contenido principal */
 .hero-main {
   color: white;
+  max-width: 650px;
 }
 
 .hero-badge {
@@ -439,8 +441,10 @@ onMounted(() => {
 /* Tarjeta de oferta */
 .hero-offer {
   align-self: center;
+  justify-self: end;
   min-width: 320px;
-  margin-left: 100px;
+  width: 100%;
+  max-width: 400px;
 }
 
 .offer-card {
@@ -628,10 +632,25 @@ onMounted(() => {
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  .hero-content {
+    gap: var(--spacing-xl);
+  }
+  
+  .hero-offer {
+    min-width: 300px;
+  }
+  
+  .hero-description {
+    max-width: 500px;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero {
     margin-top: 60px;
     padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+    min-height: auto;
   }
 
   .hero-content {
@@ -640,26 +659,65 @@ onMounted(() => {
     text-align: center;
   }
 
+  .hero-main {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .hero-description {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .hero-offer {
     justify-self: center;
     min-width: auto;
-    max-width: 400px;
+    max-width: 450px;
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .hero-features {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .trust-indicators {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-md);
+    margin-top: var(--spacing-2xl);
   }
 }
 
 @media (max-width: 768px) {
   .hero {
-    min-height: auto;
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-2xl) 0 var(--spacing-xl);
+  }
+  
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hero-description {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-lg);
   }
 
   .hero-actions {
     justify-content: center;
+    gap: var(--spacing-sm);
   }
 
   .cta-primary,
@@ -667,26 +725,61 @@ onMounted(() => {
     flex: 1;
     min-width: 0;
     justify-content: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
   }
 
   .offer-card {
     padding: var(--spacing-lg);
+    border-radius: var(--border-radius-xl);
+  }
+  
+  .offer-title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .price-current {
+    font-size: var(--font-size-2xl);
   }
 
   .trust-indicators {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-md);
   }
 
   .trust-item {
     justify-content: center;
   }
+  
+  .feature-item {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+  }
+  
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .hero-badge {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .hero-title {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+    margin-bottom: var(--spacing-md);
+  }
+
   .hero-actions {
     flex-direction: column;
     width: 100%;
+    gap: var(--spacing-sm);
   }
 
   .cta-primary,
@@ -696,10 +789,47 @@ onMounted(() => {
 
   .hero-features {
     text-align: left;
+    margin-bottom: var(--spacing-lg);
   }
 
   .feature-item {
-    justify-content: center;
+    justify-content: flex-start;
+  }
+  
+  .hero-offer {
+    max-width: 100%;
+  }
+  
+  .offer-card {
+    padding: var(--spacing-md);
+  }
+  
+  .offer-header {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .price-original {
+    font-size: var(--font-size-md);
+  }
+  
+  .price-current {
+    font-size: var(--font-size-xl);
+  }
+  
+  .offer-badge, .offer-badge-price {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+  
+  .trust-indicators {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+  }
+  
+  .trust-number {
+    font-size: var(--font-size-lg);
   }
 }
 </style>

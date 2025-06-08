@@ -5,26 +5,40 @@
 -->
 
 <template>
-  <div class="social-side-panel" :class="{ 'is-mobile': isMobile }">
-    <a
-      v-for="(url, platform) in socialMedia"
-      :key="platform"
-      :href="url"
-      :class="['social-link', `social-${platform}`]"
-      target="_blank"
-      rel="noopener noreferrer"
-      @click="handleClick(platform)"
-      :aria-label="`Visitar nuestro ${getSocialLabel(platform)}`"
+  <div class="social-side-panel" :class="{ 'is-mobile': isMobile, 'is-collapsed': isMobile && !isExpanded }">
+    <!-- Botón de expandir/contraer para móviles -->
+    <button 
+      v-if="isMobile" 
+      class="social-toggle-btn"
+      @click="toggleExpand"
+      :aria-label="isExpanded ? 'Cerrar redes sociales' : 'Abrir redes sociales'"
     >
-      <span class="social-icon">
-        <img 
-          :src="getSocialIcon(platform)" 
-          :alt="getSocialLabel(platform)"
-          loading="lazy"
-        />
-      </span>
-      <span class="social-label">{{ getSocialLabel(platform) }}</span>
-    </a>
+      <span class="toggle-icon">{{ isExpanded ? '✕' : '👥' }}</span>
+    </button>
+    
+    <!-- Enlaces de redes sociales -->
+    <div class="social-links-container" v-show="!isMobile || isExpanded">
+      <a
+        v-for="(url, platform, index) in socialMedia"
+        :key="platform"
+        :href="url"
+        :class="['social-link', `social-${platform}`]"
+        :style="{ 'animation-delay': isMobile ? `${index * 0.1}s` : '0s' }"
+        target="_blank"
+        rel="noopener noreferrer"
+        @click="handleClick(platform)"
+        :aria-label="`Visitar nuestro ${getSocialLabel(platform)}`"
+      >
+        <span class="social-icon">
+          <img 
+            :src="getSocialIcon(platform)" 
+            :alt="getSocialLabel(platform)"
+            loading="lazy"
+          />
+        </span>
+        <span class="social-label">{{ getSocialLabel(platform) }}</span>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -32,9 +46,9 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 // Importar imágenes correctamente para Vite
-import facebookIcon from '@/assets/image/logos/facebook.png';
+import facebookIcon from '@/assets/image/logos/facebook-removebg-preview.png';
 import instagramIcon from '@/assets/image/logos/instagram (1).png';
-import whatsappIcon from '@/assets/image/logos/whatsapp.png';
+import whatsappIcon from '@/assets/image/logos/whatsapp-removebg-preview.png';
 import tiktokIcon from '@/assets/image/logos/tik-tok.png';
 
 // Interfaces siguiendo principios SOLID
@@ -57,10 +71,19 @@ const emit = defineEmits<{
 
 // Estado reactivo
 const isMobile = ref<boolean>(false);
+const isExpanded = ref<boolean>(false);
 
 // Funciones utilitarias
 const checkMobile = (): void => {
   isMobile.value = window.innerWidth <= 768;
+  if (!isMobile.value) {
+    isExpanded.value = false;
+  }
+};
+
+// Función para alternar la expansión en móvil
+const toggleExpand = (): void => {
+  isExpanded.value = !isExpanded.value;
 };
 
 // Mapa de iconos importados correctamente
@@ -90,6 +113,9 @@ const getSocialLabel = (platform: string): string => {
 // Manejador de clics
 const handleClick = (platform: string): void => {
   emit('socialClick', platform);
+  if (isMobile.value) {
+    isExpanded.value = false;
+  }
 };
 
 // Lifecycle hooks
@@ -128,14 +154,12 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  background: rgba(10, 10, 10, 0.1);
+  background: transparent;
   padding: 0.8rem;
   border-radius: 16px 0 0 16px;
-  box-shadow: 0 8px 32px rgba(10, 10, 10, 0.15);
   z-index: var(--z-fixed, 1030);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(200, 160, 93, 0.2);
   transition: all 0.3s ease-in-out;
   width: fit-content;
 }
@@ -147,7 +171,7 @@ onUnmounted(() => {
   gap: 1rem;
   padding: 0.8rem;
   color: var(--optivision-black);
-  background: var(--optivision-white);
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 12px;
   text-decoration: none;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -167,6 +191,27 @@ onUnmounted(() => {
   background: var(--optivision-gold);
   color: var(--optivision-white);
   transform: translateX(-4px);
+}
+
+/* --- Colores Específicos por Red Social --- */
+.social-facebook:hover {
+  background: #1877f2;
+  border-color: #1877f2;
+}
+
+.social-instagram:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-color: #e6683c;
+}
+
+.social-whatsapp:hover {
+  background: #25d366;
+  border-color: #25d366;
+}
+
+.social-twitter:hover {
+  background: var(--optivision-black);
+  border-color: var(--optivision-black);
 }
 
 /* --- Iconos --- */
@@ -213,41 +258,82 @@ onUnmounted(() => {
   margin-left: 0.8rem;
 }
 
-/* --- Colores Específicos por Red Social --- */
-.social-facebook:hover {
-  background: #1877f2;
-  border-color: #1877f2;
+/* --- Botón Toggle para Móviles --- */
+.social-toggle-btn {
+  display: none;
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--optivision-gold);
+  border: none;
+  color: var(--optivision-white);
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(10, 10, 10, 0.15);
+  transition: all 0.3s ease;
+  z-index: 2;
 }
 
-.social-instagram:hover {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  border-color: #e6683c;
+.social-toggle-btn:hover {
+  transform: scale(1.05);
+  background: var(--optivision-gold-dark);
 }
 
-.social-whatsapp:hover {
-  background: #25d366;
-  border-color: #25d366;
-}
-
-.social-twitter:hover {
-  background: var(--optivision-black);
-  border-color: var(--optivision-black);
+.toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 /* --- Versión Móvil --- */
 .social-side-panel.is-mobile {
   position: fixed;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: calc(var(--spacing-lg, 2rem) + 60px); /* Posicionado debajo del botón back-to-top */
+  right: var(--spacing-lg, 2rem);
+  left: auto;
   top: auto;
-  flex-direction: row;
-  background: rgba(255, 255, 255, 0.98);
-  padding: 1rem 1.5rem;
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(10, 10, 10, 0.15);
+  transform: none;
+  flex-direction: column;
+  align-items: flex-end;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
   width: auto;
-  border: 2px solid var(--optivision-gold);
+  z-index: calc(var(--z-fixed, 1030) - 1); /* Un nivel por debajo del back-to-top */
+}
+
+.social-side-panel.is-mobile .social-toggle-btn {
+  display: flex;
+}
+
+.social-side-panel.is-mobile .social-links-container {
+  display: flex;
+  flex-direction: column-reverse; /* Para que despliegue hacia arriba */
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+/* Animación de despliegue individual */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Panel colapsado en móvil */
+.social-side-panel.is-mobile.is-collapsed {
+  bottom: calc(var(--spacing-lg, 2rem) + 60px); /* Ajuste según botón back-to-top */
 }
 
 .is-mobile .social-link {
@@ -256,17 +342,35 @@ onUnmounted(() => {
   min-width: auto;
   padding: 0.8rem;
   gap: 0.5rem;
-  background: transparent;
-  box-shadow: none;
-  border: none;
+  box-shadow: 0 4px 8px rgba(10, 10, 10, 0.12);
   border-radius: 12px;
+  animation: slideUp 0.5s ease forwards;
+}
+
+.is-mobile .social-facebook {
+  background: #1877f2;
+  border-color: #1877f2;
+}
+
+.is-mobile .social-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-color: #e6683c;
+}
+
+.is-mobile .social-whatsapp {
+  background: #25d366;
+  border-color: #25d366;
+}
+
+.is-mobile .social-twitter {
+  background: var(--optivision-black);
+  border-color: var(--optivision-black);
 }
 
 .is-mobile .social-link:hover {
-  background: var(--optivision-gold);
-  transform: translateY(-4px);
+  transform: scale(1.1);
   width: auto;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 .is-mobile .social-label {
@@ -274,47 +378,71 @@ onUnmounted(() => {
   transform: none;
   width: auto;
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  color: var(--optivision-black);
+  color: var(--optivision-white);
   text-align: center;
 }
 
-.is-mobile .social-link:hover .social-label {
-  color: var(--optivision-white);
-}
-
 .is-mobile .social-icon {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   margin-bottom: 2px;
 }
 
 .is-mobile .social-icon img {
   border-radius: 6px;
+  filter: brightness(0) invert(1); /* Iconos en blanco para móvil */
 }
 
 /* --- Responsive Design --- */
 @media (max-width: 480px) {
   .social-side-panel.is-mobile {
-    bottom: 1.5rem;
-    padding: 0.8rem 1.2rem;
-    border-radius: 16px;
+    bottom: calc(var(--spacing-md, 1.5rem) + 55px);
+    right: var(--spacing-md, 1.5rem);
+  }
+  
+  .social-toggle-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .social-side-panel.is-mobile .social-links-container {
+    gap: 0.4rem;
   }
   
   .is-mobile .social-icon {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
   }
   
   .is-mobile .social-label {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
+  }
+  
+  .is-mobile .social-link {
+    padding: 0.6rem;
+  }
+  
+  .is-mobile .social-link:hover {
+    padding: 0.6rem;
   }
 }
 
 @media (max-width: 360px) {
   .social-side-panel.is-mobile {
-    padding: 0.6rem 1rem;
+    bottom: calc(var(--spacing-md, 1.5rem) + 50px);
+    right: var(--spacing-md, 1.5rem);
+  }
+  
+  .social-toggle-btn {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .social-side-panel.is-mobile .social-links-container {
+    gap: 0.3rem;
   }
   
   .is-mobile .social-icon {
@@ -323,7 +451,15 @@ onUnmounted(() => {
   }
   
   .is-mobile .social-label {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
+  }
+  
+  .is-mobile .social-link {
+    padding: 0.5rem;
+  }
+  
+  .is-mobile .social-link:hover {
+    padding: 0.5rem;
   }
 }
 
@@ -342,7 +478,7 @@ onUnmounted(() => {
 }
 
 /* --- Efectos de Accesibilidad --- */
-.social-link:focus {
+.social-link:focus, .social-toggle-btn:focus {
   outline: 3px solid var(--optivision-gold);
   outline-offset: 2px;
 }
@@ -362,17 +498,24 @@ onUnmounted(() => {
   .social-link {
     border: 2px solid var(--optivision-black);
   }
+  
+  .social-toggle-btn {
+    border: 2px solid var(--optivision-black);
+  }
 }
 
 /* --- Reducción de Movimiento --- */
 @media (prefers-reduced-motion: reduce) {
   .social-link,
   .social-icon,
-  .social-label {
+  .social-label,
+  .social-toggle-btn {
     transition: none;
+    animation: none !important;
   }
   
-  .social-link:hover {
+  .social-link:hover,
+  .social-toggle-btn:hover {
     transform: none;
   }
 }
