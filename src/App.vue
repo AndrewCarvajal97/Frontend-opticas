@@ -121,11 +121,11 @@ const companyData = ref<any>({
   address: 'Solo Servicios a Domicilio',
   addressDetails: 'Atendemos en Bucaramanga y alrededores',
   workingHours: 'Lunes a Viernes: 8:00 AM - 6:00 PM | Sábados: 9:00 AM - 4:00 PM',
-  socialMedia: {
-    facebook: 'https://facebook.com/opticavision4k',
-    instagram: 'https://instagram.com/opticavision4k',
+  socialMedia: {     
+    facebook: 'https://www.facebook.com/profile.php?id=61574186137802&mibextid=wwXIfr&rdid=dw3lOLabxclwQ3kU&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1J9yz2yy2j%2F%3Fmibextid%3DwwXIfr#',
+    instagram: 'https://instagram.com/opticavision.4k',
     whatsapp: 'https://wa.me/573123765934',
-    twitter: 'https://twitter.com/opticavision4k'
+    twitter: 'https://www.tiktok.com/@optivision.4k?_t=zs-8uqiiozefew&_r=1'
   }
 });
 

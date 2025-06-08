@@ -13,7 +13,7 @@
       @click="toggleExpand"
       :aria-label="isExpanded ? 'Cerrar redes sociales' : 'Abrir redes sociales'"
     >
-      <span class="toggle-icon">{{ isExpanded ? '✕' : '👥' }}</span>
+      <span class="toggle-icon">{{ isExpanded ? '✕' : '📨' }}</span> 
     </button>
     
     <!-- Enlaces de redes sociales -->
@@ -309,6 +309,9 @@ onUnmounted(() => {
 
 .social-side-panel.is-mobile .social-toggle-btn {
   display: flex;
+  width: 45px;
+  height: 45px;
+
 }
 
 .social-side-panel.is-mobile .social-links-container {
