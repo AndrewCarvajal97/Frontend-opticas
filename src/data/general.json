@@ -1,0 +1,127 @@
+{
+  "general": {
+    "companyName": "OPTIVISIÓN 4K",
+    "tagline": "Mira al mundo con otros ojos ",
+    "description": "Somos especialistas en cuidado visual con más de 2 años de experiencia. Ofrecemos productos de alta calidad y servicios innovadores como exámenes ópticos a domicilio.",
+    "phone": "+57 312 376 5934",
+    "email": "info@optivision4k.com",
+    "address": "Solo servicio a domicilio en Bucaramanga y área metropolitana",
+    "workingHours": "Lunes a Viernes: 8:00 AM - 6:00 PM | Sábados: 9:00 AM - 4:00 PM",
+    "socialMedia": {
+      "facebook": "https://facebook.com/Optivision4k",
+      "instagram": "https://instagram.com/Optivision4k",
+      "whatsapp": "https://wa.me/573123765934",
+      "twitter": "https://twitter.com/Optivision4k"
+    }
+  },
+  "hero": {
+    "title": "Examen Óptico a Domicilio",
+    "subtitle": "¡La comodidad de un examen profesional en tu hogar!",
+    "description": "Somos la primera óptica en la región que lleva el examen óptico directamente a tu puerta. Nuestros optometristas certificados realizan evaluaciones completas con equipos de última tecnología.",
+    "ctaText": "Agenda tu Cita a Domicilio",
+    "features": [
+      "Examen óptico profesional en tu hogar",
+      "Equipos de última tecnología",
+      "Optometristas certificados",
+      "Descuento si compras tus lentes con nosotros"
+    ],
+    "pricing": {
+      "homeExam": 35000,
+      "discount": "Bono de $35.000 en la compra de tus lentes por traer tu formula visual actualizada",
+      "description": "Si traes tu fórmula visual actualizada, te damos un bono de $35.000 para la compra de tus lentes. ¡Aprovecha esta oferta exclusiva!"
+    }
+  },
+  "about": {
+    "title": "¿Por qué elegirnos?",
+    "description": "Somos pioneros en brindar servicios ópticos a domicilio. Nuestra pasión por la innovación y el cuidado visual nos ha convertido en la optica de confianza para miles de familias.",
+    "features": [
+      {
+        "icon": "🏠",
+        "title": "Servicio a Domicilio",
+        "description": "Llevamos nuestros servicios hasta la comodidad de tu hogar u oficina"
+      },
+      {
+        "icon": "👨‍⚕️",
+        "title": "Profesionales Certificados",
+        "description": "Contamos con optometristas licenciados y con amplia experiencia"
+      },
+      {
+        "icon": "🔬",
+        "title": "Tecnología Avanzada",
+        "description": "Utilizamos equipos de última generación para diagnósticos precisos"
+      },
+      {
+        "icon": "💰",
+        "title": "Precios Competitivos",
+        "description": "Los mejores precios del mercado con financiación disponible"
+      },
+      {
+        "icon": "⚡",
+        "title": "Entrega Rápida",
+        "description": "Entregamos tus lentes en tiempo récord sin comprometer la calidad"
+      },
+      {
+        "icon": "🛡️",
+        "title": "Garantía Extendida",
+        "description": "Todos nuestros productos cuentan con garantía y soporte postventa"
+      }
+    ]
+  },
+  "contact": {
+    "title": "¿Listo para mejorar tu visión?",
+    "subtitle": "Contáctanos y agenda tu cita a domicilio hoy mismo",
+    "description": "Nuestro equipo está listo para atenderte. Agenda tu examen óptico a domicilio y descubre la diferencia de un servicio personalizado.",
+    "form": {
+      "title": "Agenda tu Cita a Domicilio",
+      "fields": [
+        {
+          "name": "fullName",
+          "label": "Nombre Completo",
+          "type": "text",
+          "required": true,
+          "placeholder": "Ingresa tu nombre completo"
+        },
+        {
+          "name": "phone",
+          "label": "Teléfono/Celular",
+          "type": "tel",
+          "required": true,
+          "placeholder": "300 123 4567"
+        },
+        {
+          "name": "email",
+          "label": "Correo Electrónico",
+          "type": "email",
+          "required": true,
+          "placeholder": "tucorreo@email.com"
+        },
+        {
+          "name": "address",
+          "label": "Dirección",
+          "type": "text",
+          "required": true,
+          "placeholder": "Dirección completa para la visita"
+        },
+        {
+          "name": "preferredDate",
+          "label": "Fecha Preferida",
+          "type": "date",
+          "required": true
+        },
+        {
+          "name": "preferredTime",
+          "label": "Hora Preferida",
+          "type": "time",
+          "required": true
+        },
+        {
+          "name": "message",
+          "label": "Mensaje Adicional",
+          "type": "textarea",
+          "required": false,
+          "placeholder": "¿Alguna solicitud especial o información adicional?"
+        }
+      ]
+    }
+  }
+}

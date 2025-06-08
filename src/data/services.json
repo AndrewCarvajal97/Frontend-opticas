@@ -1,0 +1,301 @@
+{
+  "services": [
+    {
+      "id": "examen-domicilio",
+      "name": "Examen Óptico a Domicilio",
+      "category": "Servicio Premium",
+      "icon": "🏠",
+      "price": 50000,
+      "originalPrice": 50000,
+      "freeWithPurchase": true,
+      "description": "Nuestro servicio estrella: llevamos todo el equipo especializado directamente a tu hogar u oficina para realizar un examen óptico completo y profesional.",
+      "features": [
+        "Examen óptico completo",
+        "Equipos de última tecnología",
+        "Optometrista certificado",
+        "Medición de agudeza visual",
+        "Evaluación de salud ocular",
+        "Recomendaciones personalizadas",
+        "GRATIS al comprar lentes con nosotros"
+      ],
+      "duration": "45-60 minutos",
+      "includes": [
+        "Evaluación de agudeza visual",
+        "Medición de graduación",
+        "Examen de fondo de ojo",
+        "Evaluación de presión intraocular",
+        "Asesoría personalizada",
+        "Certificado médico"
+      ],
+      "benefits": [
+        "Comodidad total en tu hogar",
+        "Sin filas ni esperas",
+        "Atención personalizada",
+        "Horarios flexibles",
+        "Seguimiento postventa"
+      ],
+      "coverage": "Todo Pedraza y municipios cercanos",
+      "bookingRequired": true,
+      "rating": 4.9,
+      "reviews": 567,
+      "featured": true
+    },
+    {
+      "id": "examen-consultorio",
+      "name": "Examen Óptico en Consultorio",
+      "category": "Servicio Estándar",
+      "icon": "🏥",
+      "price": 35000,
+      "originalPrice": 35000,
+      "freeWithPurchase": true,
+      "description": "Examen óptico completo en nuestras modernas instalaciones con equipos de última generación.",
+      "features": [
+        "Consultorio equipado",
+        "Ambiente controlado",
+        "Todos los equipos disponibles",
+        "Atención inmediata",
+        "Profesionales especializados"
+      ],
+      "duration": "30-45 minutos",
+      "includes": [
+        "Evaluación completa de la vista",
+        "Medición precisa de graduación",
+        "Examen de salud ocular",
+        "Recomendaciones profesionales"
+      ],
+      "benefits": [
+        "Precio económico",
+        "Servicio rápido",
+        "Equipos especializados",
+        "Ambiente profesional"
+      ],
+      "bookingRequired": false,
+      "rating": 4.7,
+      "reviews": 342
+    },
+    {
+      "id": "montaje-express",
+      "name": "Montaje Express",
+      "category": "Servicio Técnico",
+      "icon": "⚡",
+      "price": 15000,
+      "originalPrice": 25000,
+      "discount": 40,
+      "description": "Montaje rápido de lentes en tu montura favorita. Servicio express para cuando necesitas tus gafas urgente.",
+      "features": [
+        "Montaje en 30 minutos",
+        "Precisión garantizada",
+        "Ajuste profesional",
+        "Verificación de calidad",
+        "Entrega inmediata"
+      ],
+      "duration": "30 minutos",
+      "includes": [
+        "Montaje profesional",
+        "Ajuste ergonómico",
+        "Limpieza de lentes",
+        "Verificación de graduación",
+        "Estuche incluido"
+      ],
+      "benefits": [
+        "Servicio ultrarrápido",
+        "Ideal para emergencias",
+        "Sin cita previa",
+        "Garantía de calidad"
+      ],
+      "bookingRequired": false,
+      "rating": 4.6,
+      "reviews": 234
+    },
+    {
+      "id": "ajuste-reparacion",
+      "name": "Ajuste y Reparación",
+      "category": "Servicio Técnico",
+      "icon": "🔧",
+      "price": 10000,
+      "originalPrice": 15000,
+      "discount": 33,
+      "description": "Ajustes y reparaciones menores para mantener tus gafas en perfecto estado.",
+      "features": [
+        "Ajuste de plaquetas",
+        "Reparación de bisagras",
+        "Cambio de tornillos",
+        "Enderezado de marcos",
+        "Servicio inmediato"
+      ],
+      "duration": "15-30 minutos",
+      "includes": [
+        "Diagnóstico gratuito",
+        "Reparación o ajuste",
+        "Limpieza completa",
+        "Verificación final"
+      ],
+      "benefits": [
+        "Precio muy económico",
+        "Servicio inmediato",
+        "Diagnóstico gratuito",
+        "Garantía en reparación"
+      ],
+      "bookingRequired": false,
+      "rating": 4.5,
+      "reviews": 189
+    },
+    {
+      "id": "asesoria-personalizada",
+      "name": "Asesoría Personalizada",
+      "category": "Consultoría",
+      "icon": "👨‍💼",
+      "price": 0,
+      "originalPrice": 20000,
+      "discount": 100,
+      "description": "Asesoría completa para encontrar el producto perfecto según tu estilo de vida y necesidades visuales.",
+      "features": [
+        "Análisis de necesidades",
+        "Recomendación de productos",
+        "Prueba de monturas",
+        "Asesoría de estilo",
+        "Totalmente gratuito"
+      ],
+      "duration": "30-45 minutos",
+      "includes": [
+        "Consulta personalizada",
+        "Análisis facial",
+        "Recomendaciones de estilo",
+        "Prueba de productos",
+        "Cotización detallada"
+      ],
+      "benefits": [
+        "Completamente gratis",
+        "Asesoría profesional",
+        "Sin compromiso",
+        "Atención personalizada"
+      ],
+      "bookingRequired": true,
+      "rating": 4.8,
+      "reviews": 445,
+      "free": true
+    },
+    {
+      "id": "servicio-empresarial",
+      "name": "Servicio Empresarial",
+      "category": "Corporativo",
+      "icon": "🏢",
+      "price": 0,
+      "originalPrice": 0,
+      "description": "Llevamos nuestros servicios directamente a tu empresa. Exámenes grupales y descuentos especiales para empleados.",
+      "features": [
+        "Jornadas de salud visual",
+        "Exámenes grupales",
+        "Descuentos corporativos",
+        "Facturación empresarial",
+        "Horarios flexibles"
+      ],
+      "duration": "Por definir",
+      "includes": [
+        "Exámenes ópticos grupales",
+        "Charlas de salud visual",
+        "Descuentos especiales",
+        "Reportes empresariales",
+        "Seguimiento anual"
+      ],
+      "benefits": [
+        "Cuidado visual para empleados",
+        "Descuentos corporativos",
+        "Mejora del bienestar laboral",
+        "Flexibilidad de horarios"
+      ],
+      "bookingRequired": true,
+      "rating": 4.7,
+      "reviews": 89,
+      "corporate": true
+    },
+    {
+      "id": "mantenimiento-mensual",
+      "name": "Plan de Mantenimiento",
+      "category": "Suscripción",
+      "icon": "🔄",
+      "price": 25000,
+      "originalPrice": 40000,
+      "discount": 38,
+      "description": "Plan mensual que incluye limpieza profunda, ajustes y revisiones para mantener tus gafas como nuevas.",
+      "features": [
+        "Limpieza profunda mensual",
+        "Ajustes incluidos",
+        "Revisión de graduación",
+        "Descuentos en productos",
+        "Atención prioritaria"
+      ],
+      "duration": "Mensual",
+      "includes": [
+        "Limpieza ultrasónica",
+        "Ajustes necesarios",
+        "Revisión de estado",
+        "Lubricación de bisagras",
+        "Informe mensual"
+      ],
+      "benefits": [
+        "Gafas siempre perfectas",
+        "Descuentos exclusivos",
+        "Atención prioritaria",
+        "Mayor durabilidad"
+      ],
+      "bookingRequired": true,
+      "rating": 4.6,
+      "reviews": 156,
+      "subscription": true
+    },
+    {
+      "id": "garantia-extendida",
+      "name": "Garantía Extendida",
+      "category": "Protección",
+      "icon": "🛡️",
+      "price": 60000,
+      "originalPrice": 80000,
+      "discount": 25,
+      "description": "Protección total para tus lentes por 2 años. Incluye reposición por daños y cambios de graduación.",
+      "features": [
+        "Cobertura por 2 años",
+        "Reposición por daños",
+        "Cambios de graduación",
+        "Servicio a domicilio",
+        "Sin letra pequeña"
+      ],
+      "duration": "2 años",
+      "includes": [
+        "Reposición completa",
+        "Cambios de graduación",
+        "Reparaciones mayores",
+        "Servicio prioritario",
+        "Sin costos adicionales"
+      ],
+      "benefits": [
+        "Tranquilidad total",
+        "Protección completa",
+        "Ahorro a largo plazo",
+        "Servicio premium"
+      ],
+      "bookingRequired": false,
+      "rating": 4.8,
+      "reviews": 278,
+      "warranty": true
+    }
+  ],
+  "popularServices": ["examen-domicilio", "montaje-express", "asesoria-personalizada"],
+  "premiumServices": ["examen-domicilio", "garantia-extendida", "mantenimiento-mensual"],
+  "freeServices": ["asesoria-personalizada"],
+  "workingHours": {
+    "monday": "8:00 AM - 6:00 PM",
+    "tuesday": "8:00 AM - 6:00 PM", 
+    "wednesday": "8:00 AM - 6:00 PM",
+    "thursday": "8:00 AM - 6:00 PM",
+    "friday": "8:00 AM - 6:00 PM",
+    "saturday": "9:00 AM - 4:00 PM",
+    "sunday": "Cerrado"
+  },
+  "emergencyService": {
+    "available": true,
+    "phone": "+57 300 123 4567",
+    "additionalCost": 25000,
+    "description": "Servicio de emergencia disponible 24/7 con costo adicional"
+  }
+}

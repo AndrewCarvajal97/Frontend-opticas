@@ -1,0 +1,359 @@
+{
+  "categories": [
+    {
+      "id": "monturas",
+      "name": "Monturas",
+      "description": "Amplia variedad de monturas para todos los gustos y edades",
+      "icon": "👓"
+    },
+    {
+      "id": "lentes",
+      "name": "Lentes",
+      "description": "Lentes de alta calidad con diferentes tratamientos",
+      "icon": "🔍"
+    },
+    {
+      "id": "gafas-sol",
+      "name": "Gafas de Sol",
+      "description": "Protección y estilo para tus ojos",
+      "icon": "🕶️"
+    },
+    {
+      "id": "accesorios",
+      "name": "Accesorios",
+      "description": "Todo lo que necesitas para el cuidado de tus lentes",
+      "icon": "🧽"
+    }
+  ],
+  "products": [
+    {
+      "id": "mont-001",
+      "name": "Montura Clásica Titanio",
+      "category": "monturas",
+      "brand": "Premium Vision",
+      "price": 280000,
+      "originalPrice": 350000,
+      "discount": 20,
+      "description": "Montura elegante fabricada en titanio ultraliviano. Perfecta para uso diario con máxima comodidad y durabilidad.",
+      "features": [
+        "Material: Titanio puro",
+        "Peso ultraliviano",
+        "Resistente a la corrosión",
+        "Ajustable",
+        "Hipoalergénica"
+      ],
+      "images": [
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp"
+      ],
+      "colors": ["Negro", "Dorado", "Plateado"],
+      "sizes": ["S", "M", "L"],
+      "inStock": true,
+      "stockQuantity": 25,
+      "rating": 4.8,
+      "reviews": 124
+    },
+    {
+      "id": "mont-002",
+      "name": "Montura Juvenil Colorida",
+      "category": "monturas",
+      "brand": "Young Style",
+      "price": 150000,
+      "originalPrice": 200000,
+      "discount": 25,
+      "description": "Diseño moderno y divertido para jóvenes. Colores vibrantes y materiales flexibles para máxima comodidad.",
+      "features": [
+        "Material: Acetato flexible",
+        "Diseño ergonómico",
+        "Colores vibrantes",
+        "Resistente a impactos",
+        "Perfecta para jóvenes"
+      ],
+      "images": [
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp"
+      ],
+      "colors": ["Azul Eléctrico", "Rosa Fucsia", "Verde Lima", "Naranja"],
+      "sizes": ["XS", "S", "M"],
+      "inStock": true,
+      "stockQuantity": 40,
+      "rating": 4.6,
+      "reviews": 89
+    },
+    {
+      "id": "mont-003",
+      "name": "Montura Ejecutiva Premium",
+      "category": "monturas",
+      "brand": "Executive Collection",
+      "price": 420000,
+      "originalPrice": 500000,
+      "discount": 16,
+      "description": "Elegancia y sofisticación para el profesional moderno. Diseño atemporal con materiales de primera calidad.",
+      "features": [
+        "Material: Acetato italiano",
+        "Bisagras reforzadas",
+        "Acabado mate premium",
+        "Diseño atemporal",
+        "Certificación de calidad"
+      ],
+      "images": [
+       "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp"
+      ],
+      "colors": ["Negro Mate", "Marrón Chocolate", "Azul Marino"],
+      "sizes": ["M", "L", "XL"],
+      "inStock": true,
+      "stockQuantity": 15,
+      "rating": 4.9,
+      "reviews": 67
+    },
+    {
+      "id": "lent-001",
+      "name": "Lentes Monofocales HD",
+      "category": "lentes",
+      "brand": "ClearVision",
+      "price": 180000,
+      "originalPrice": 220000,
+      "discount": 18,
+      "description": "Lentes monofocales de alta definición con tratamiento antirreflejo y protección UV.",
+      "features": [
+        "Alta definición óptica",
+        "Tratamiento antirreflejo",
+        "Protección UV 100%",
+        "Material CR-39",
+        "Fácil limpieza"
+      ],
+      "images": [
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp"
+      ],
+      "prescriptionRequired": true,
+      "inStock": true,
+      "stockQuantity": 100,
+      "rating": 4.7,
+      "reviews": 203
+    },
+    {
+      "id": "lent-002",
+      "name": "Lentes Progresivos Digitales",
+      "category": "lentes",
+      "brand": "Progressive Tech",
+      "price": 480000,
+      "originalPrice": 600000,
+      "discount": 20,
+      "description": "Tecnología digital avanzada para una visión perfecta a todas las distancias. Adaptación rápida garantizada.",
+      "features": [
+        "Diseño digital personalizado",
+        "Transición suave",
+        "Campo visual amplio",
+        "Adaptación rápida",
+        "Garantía de satisfacción"
+      ],
+      "images": [
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp"
+      ],
+      "prescriptionRequired": true,
+      "inStock": true,
+      "stockQuantity": 50,
+      "rating": 4.8,
+      "reviews": 156
+    },
+    {
+      "id": "lent-003",
+      "name": "Lentes Fotosensibles Transitions",
+      "category": "lentes",
+      "brand": "Transitions",
+      "price": 320000,
+      "originalPrice": 400000,
+      "discount": 20,
+      "description": "Se adaptan automáticamente a los cambios de luz. Perfectos para uso interior y exterior.",
+      "features": [
+        "Adaptación automática",
+        "Protección UV total",
+        "Bloqueo luz azul",
+        "Durabilidad superior",
+        "Comodidad visual"
+      ],
+      "images": [
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp"
+      ],
+      "prescriptionRequired": true,
+      "inStock": true,
+      "stockQuantity": 75,
+      "rating": 4.9,
+      "reviews": 189
+    },
+    {
+      "id": "sol-001",
+      "name": "Gafas de Sol Deportivas",
+      "category": "gafas-sol",
+      "brand": "SportVision",
+      "price": 220000,
+      "originalPrice": 280000,
+      "discount": 21,
+      "description": "Diseñadas para deportistas. Máxima protección y comodidad durante la actividad física.",
+      "features": [
+        "Protección UV 400",
+        "Lentes polarizados",
+        "Diseño aerodinámico",
+        "Ajuste seguro",
+        "Resistente al sudor"
+      ],
+      "images": [
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp"
+      ],
+      "colors": ["Negro/Azul", "Blanco/Rojo", "Gris/Verde"],
+      "inStock": true,
+      "stockQuantity": 30,
+      "rating": 4.6,
+      "reviews": 142
+    },
+    {
+      "id": "sol-002",
+      "name": "Gafas de Sol Fashion Mujer",
+      "category": "gafas-sol",
+      "brand": "Glamour Eyes",
+      "price": 180000,
+      "originalPrice": 240000,
+      "discount": 25,
+      "description": "Estilo y elegancia para la mujer moderna. Diseño fashión con protección total.",
+      "features": [
+        "Diseño oversized",
+        "Protección UV total",
+        "Marco liviano",
+        "Estuche incluido",
+        "Cristales polarizados"
+      ],
+      "images": [
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp"
+      ],
+      "colors": ["Negro Clásico", "Marrón Tortuga", "Rosa Gold"],
+      "inStock": true,
+      "stockQuantity": 35,
+      "rating": 4.7,
+      "reviews": 98
+    },
+    {
+      "id": "sol-003",
+      "name": "Gafas de Sol Aviador Clásico",
+      "category": "gafas-sol",
+      "brand": "Classic Aviation",
+      "price": 160000,
+      "originalPrice": 200000,
+      "discount": 20,
+      "description": "El estilo aviador que nunca pasa de moda. Elegancia atemporal para hombres y mujeres.",
+      "features": [
+        "Diseño aviador clásico",
+        "Marco metálico",
+        "Lentes degradados",
+        "Unisex",
+        "Estuche rígido incluido"
+      ],
+      "images": [
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp"
+      ],
+      "colors": ["Dorado", "Plateado", "Negro"],
+      "inStock": true,
+      "stockQuantity": 45,
+      "rating": 4.8,
+      "reviews": 234
+    },
+    {
+      "id": "acc-001",
+      "name": "Kit de Limpieza Premium",
+      "category": "accesorios",
+      "brand": "CleanLens Pro",
+      "price": 35000,
+      "originalPrice": 45000,
+      "discount": 22,
+      "description": "Kit completo para el cuidado y limpieza de tus lentes. Incluye todo lo necesario.",
+      "features": [
+        "Spray limpiador 50ml",
+        "Paño microfibra premium",
+        "Estuche protector",
+        "Instructivo de uso",
+        "Fórmula anti-empañante"
+      ],
+      "images": [
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp"
+      ],
+      "inStock": true,
+      "stockQuantity": 200,
+      "rating": 4.5,
+      "reviews": 167
+    },
+    {
+      "id": "acc-002",
+      "name": "Cadena para Gafas Elegante",
+      "category": "accesorios",
+      "brand": "Fashion Chains",
+      "price": 25000,
+      "originalPrice": 35000,
+      "discount": 29,
+      "description": "Cadena elegante para mantener tus gafas siempre seguras y a la mano.",
+      "features": [
+        "Material resistente",
+        "Diseño elegante",
+        "Ajuste universal",
+        "Varios colores",
+        "Fácil instalación"
+      ],
+      "images": [
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp"
+      ],
+      "colors": ["Dorado", "Plateado", "Bronce"],
+      "inStock": true,
+      "stockQuantity": 150,
+      "rating": 4.3,
+      "reviews": 89
+    },
+    {
+      "id": "acc-003",
+      "name": "Estuche Rígido Premium",
+      "category": "accesorios",
+      "brand": "Protection Plus",
+      "price": 45000,
+      "originalPrice": 60000,
+      "discount": 25,
+      "description": "Máxima protección para tus lentes. Resistente a impactos con interior acolchado.",
+      "features": [
+        "Material rígido",
+        "Interior acolchado",
+        "Resistente a impactos",
+        "Cierre seguro",
+        "Diseño compacto"
+      ],
+      "images": [
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp",
+        "src/images/monturas/mujer/COD(0001).webp"
+      ],
+      "colors": ["Negro", "Azul", "Marrón"],
+      "inStock": true,
+      "stockQuantity": 80,
+      "rating": 4.6,
+      "reviews": 134
+    }
+  ],
+  "bestsellers": ["mont-002", "lent-003", "sol-003", "mont-001"],
+  "newArrivals": ["mont-003", "lent-002", "sol-001"],
+  "onSale": ["mont-002", "sol-002", "acc-001"]
+}

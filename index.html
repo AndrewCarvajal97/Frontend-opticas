@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Información básica del sitio -->
+    <title>Óptica Visión Plus - Examen Óptico a Domicilio | Tu visión, nuestra misión</title>
+    <meta name="description" content="Somos especialistas en cuidado visual con más de 2 años de experiencia. Examen óptico a domicilio GRATIS con la compra de tus lentes. Productos de alta calidad en Pedraza, Magdalena." />
+    <meta name="keywords" content="óptica, examen óptico, domicilio, lentes, gafas, monturas, Pedraza, Magdalena, Colombia" />
+    <meta name="author" content="Óptica Visión Plus" />
+    
+    <!-- Favicon y iconos -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Óptica Visión Plus - Examen Óptico a Domicilio" />
+    <meta property="og:description" content="Somos especialistas en cuidado visual. Examen óptico a domicilio GRATIS con la compra de tus lentes." />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:url" content="https://opticavisionplus.com" />
+    <meta property="og:site_name" content="Óptica Visión Plus" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Óptica Visión Plus - Examen Óptico a Domicilio" />
+    <meta name="twitter:description" content="Somos especialistas en cuidado visual. Examen óptico a domicilio GRATIS con la compra de tus lentes." />
+    <meta name="twitter:image" content="/og-image.jpg" />
+    
+    <!-- PWA y móviles -->
+    <meta name="theme-color" content="#6366f1" />
+    <meta name="msapplication-TileColor" content="#6366f1" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Preconnect a dominios externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.whatsapp.com" />
+    
+    <!-- Fuentes de Google (opcional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "OptometryPractice",
+      "name": "Óptica Visión Plus",
+      "description": "Especialistas en cuidado visual con servicio de examen óptico a domicilio",
+      "url": "https://opticavisionplus.com",
+      "telephone": "+573001234567",
+      "email": "info@opticavisionplus.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle 123 #45-67",
+        "addressLocality": "Pedraza",
+        "addressRegion": "Magdalena",
+        "addressCountry": "CO"
+      },
+      "openingHours": [
+        "Mo-Fr 08:00-18:00",
+        "Sa 09:00-16:00"
+      ],
+      "sameAs": [
+        "https://facebook.com/opticavisionplus",
+        "https://instagram.com/opticavisionplus",
+        "https://twitter.com/opticavisionplus"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios Ópticos",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Examen Óptico a Domicilio",
+              "description": "Examen óptico profesional en la comodidad de tu hogar"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Estilos críticos inline (para mejorar LCP) -->
+    <style>
+      /* Estilos críticos para evitar FOUC */
+      body {
+        margin: 0;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: #ffffff;
+        color: #374151;
+        line-height: 1.6;
+      }
+      
+      #app {
+        min-height: 100vh;
+      }
+      
+      /* Loading inicial */
+      .initial-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid #e5e7eb;
+        border-top: 3px solid #6366f1;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading inicial mientras carga Vue -->
+    <div id="initial-loading" class="initial-loading">
+      <div class="loading-spinner"></div>
+    </div>
+    
+    <!-- Contenedor principal de la aplicación -->
+    <div id="app"></div>
+    
+    <!-- Script principal -->
+    <script type="module" src="/src/main.ts"></script>
+    
+    <!-- Script para remover loading inicial -->
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          const loading = document.getElementById('initial-loading');
+          if (loading) {
+            loading.style.opacity = '0';
+            setTimeout(function() {
+              loading.remove();
+            }, 300);
+          }
+        }, 500);
+      });
+    </script>
+    
+    <!-- Noscript fallback -->
+    <noscript>
+      <div style="padding: 2rem; text-align: center; font-family: sans-serif;">
+        <h1>🔧 JavaScript Requerido</h1>
+        <p>Esta aplicación requiere JavaScript para funcionar correctamente.</p>
+        <p>Por favor, habilita JavaScript en tu navegador e intenta nuevamente.</p>
+        <hr style="margin: 2rem 0;">
+        <p><strong>Óptica Visión Plus</strong></p>
+        <p>📞 <a href="tel:+573001234567">+57 300 123 4567</a></p>
+        <p>✉️ <a href="mailto:info@opticavisionplus.com">info@opticavisionplus.com</a></p>
+      </div>
+    </noscript>
+  </body>
+</html>
