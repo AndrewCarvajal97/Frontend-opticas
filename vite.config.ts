@@ -4,7 +4,7 @@ import { resolve } from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Frontend-opticas',
+  base: '/Frontend-opticas/',
   plugins: [vue()],
   resolve: {
     alias: {
