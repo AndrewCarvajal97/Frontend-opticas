@@ -288,9 +288,12 @@ const handleImageClick = (): void => {
   emit('imageClick', props.product);
 };
 
+// Import the fallback image
+import fallbackImage from '@/assets/image/monturas/mujer/COD(0001).webp';
+
 const handleImageError = (event: Event): void => {
   const img = event.target as HTMLImageElement;
-  img.src = '@/assets/image/monturas/mujer/COD(0001).webp'; // Imagen por defecto
+  img.src = fallbackImage; // Imagen por defecto
 };
 
 const handleImageLoad = (): void => {

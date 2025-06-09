@@ -317,9 +317,12 @@ const handleShopNow = (): void => {
   emit('shopNow');
 };
 
+// Import the fallback image
+import fallbackImage from '@/assets/image/monturas/mujer/COD(0001).webp';
+
 const handleImageError = (event: Event): void => {
   const img = event.target as HTMLImageElement;
-  img.src = '/assets/image/monturas/COD(0001).webp'; // Ruta de imagen por defecto
+  img.src = fallbackImage; // Ruta de imagen por defecto
 };
 
 const formatPrice = (price: number): string => {
